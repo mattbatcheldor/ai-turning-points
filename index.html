@@ -5,13 +5,13 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>AI Turning Points | Edition 01, Fame first</title>
 <meta name="description" content="An editorial archive of what businesses handed to machines, what stayed human and what the evidence can prove. Edition 01, Fame first: fifteen cases, 2012 to 2025.">
-<meta name="theme-color" content="#1B1710">
+<meta name="theme-color" content="#171F2C">
 <style>
 :root{
-  --bg:#1B1710; --bg2:#221D15; --card:#262018; --line:#3A3225;
-  --ink:#F2EDE4; --ink2:#BFB5A3; --ink3:#8C8371;
-  --accent:#C9913F; --accent2:#E3B468;
-  --ev4:#C9913F; --ev3:#A8894E; --ev2:#8A7B5C; --ev1:#6E6752; --ev0:#4E4A3E;
+  --bg:#171F2C; --bg2:#1C2839; --card:#1D2A3B; --line:#364A63;
+  --ink:#F1F5FB; --ink2:#C3CFDF; --ink3:#9EB0C7;
+  --accent:#8DBDFF; --accent2:#B9D5FF;
+  --ev4:#8DBDFF; --ev3:#99AFD0; --ev2:#8197B6; --ev1:#627691; --ev0:#40516B;
 }
 *{box-sizing:border-box}
 html{scroll-behavior:smooth}
@@ -20,7 +20,7 @@ body{margin:0;background:var(--bg);color:var(--ink);
  font-family:Georgia,"Iowan Old Style","Times New Roman",serif;
  font-size:17px;line-height:1.62;-webkit-font-smoothing:antialiased}
 .wrap{max-width:760px;margin:0 auto;padding:0 20px}
-a{color:var(--accent2);text-decoration:none;border-bottom:1px solid rgba(201,145,63,.4)}
+a{color:var(--accent2);text-decoration:none;border-bottom:1px solid rgba(141,189,255,.4)}
 a:hover{border-bottom-color:var(--accent2)}
 h1,h2,h3,h4,.ui{font-family:ui-sans-serif,-apple-system,"Segoe UI",Helvetica,Arial,sans-serif}
 
@@ -73,7 +73,7 @@ strong{color:#fff;font-weight:600}
 .plot circle{fill:var(--accent);opacity:.88;cursor:pointer;transition:all .15s}
 .plot .pt:hover circle{fill:var(--accent2);r:17}
 .plot text:not(.ax):not(.axttl){font-family:ui-sans-serif,sans-serif;font-size:11px;
- fill:#1B1710;font-weight:700;text-anchor:middle;pointer-events:none}
+ fill:#171F2C;font-weight:700;text-anchor:middle;pointer-events:none}
 .plotnote{font-size:14.5px;color:var(--ink3);margin-top:-8px}
 
 .filters{margin:26px 0 20px}
@@ -85,7 +85,7 @@ strong{color:#fff;font-weight:600}
  color:var(--ink2);border:1px solid var(--line);border-radius:3px;padding:4px 10px;cursor:pointer;
  transition:all .12s}
 .fbtns button:hover{border-color:var(--ink3);color:var(--ink)}
-.fbtns button.on{background:var(--accent);border-color:var(--accent);color:#1B1710;font-weight:600}
+.fbtns button.on{background:var(--accent);border-color:var(--accent);color:#171F2C;font-weight:600}
 #q{width:100%;background:var(--bg2);border:1px solid var(--line);border-radius:3px;
  padding:9px 12px;color:var(--ink);font-family:ui-sans-serif,sans-serif;font-size:14px;margin-top:4px}
 #q:focus{outline:none;border-color:var(--accent)}
@@ -98,7 +98,7 @@ strong{color:#fff;font-weight:600}
 .case.flash{border-color:var(--accent)}
 .case-head{width:100%;display:flex;gap:14px;align-items:flex-start;background:transparent;
  border:0;padding:16px 17px;cursor:pointer;text-align:left;color:inherit}
-.case-head:hover{background:rgba(201,145,63,.05)}
+.case-head:hover{background:rgba(141,189,255,.05)}
 .num{font-family:ui-sans-serif,sans-serif;font-size:11px;color:var(--ink3);padding-top:3px;
  letter-spacing:.08em;flex-shrink:0}
 .case-id{flex:1;min-width:0}
@@ -110,7 +110,7 @@ strong{color:#fff;font-weight:600}
 .rates{display:flex;gap:6px;flex-wrap:wrap;justify-content:flex-end;flex-shrink:0;max-width:200px}
 .pill{font-family:ui-sans-serif,sans-serif;font-size:10.5px;letter-spacing:.06em;padding:3px 8px;
  border-radius:2px;white-space:nowrap;font-weight:600}
-.ev{color:#1B1710}
+.ev{color:#171F2C}
 .ev-4{background:var(--ev4)} .ev-3{background:var(--ev3)} .ev-2{background:var(--ev2)}
 .ev-1{background:var(--ev1);color:var(--ink)} .ev-0{background:var(--ev0);color:var(--ink2)}
 .hv{background:transparent;border:1px solid var(--line);color:var(--ink2)}
@@ -121,7 +121,7 @@ strong{color:#fff;font-weight:600}
 .case-body{display:none;padding:2px 17px 22px;border-top:1px solid var(--line);margin-top:-1px}
 .case.open .case-body{display:block}
 .headline{font-family:ui-sans-serif,sans-serif;font-size:15px;color:var(--accent2);
- background:rgba(201,145,63,.07);border-left:2px solid var(--accent);padding:12px 14px;
+ background:rgba(141,189,255,.07);border-left:2px solid var(--accent);padding:12px 14px;
  margin:18px 0 22px}
 .headline span{display:block;font-size:10px;letter-spacing:.15em;text-transform:uppercase;
  color:var(--ink3);margin-bottom:5px}
@@ -164,7 +164,84 @@ footer p{margin:0 0 9px}
 .case-media img{display:block;width:100%;height:auto;max-height:460px;object-fit:contain;margin:auto}
 .case-media figcaption{font-family:ui-sans-serif,-apple-system,"Segoe UI",Arial,sans-serif;font-size:12px;line-height:1.6;color:var(--ink2);margin-top:9px}
 .case-media figcaption a{color:var(--accent2)}
+
+/* Midnight blue family presentation */
+body{font-family:Arial,Helvetica,sans-serif;font-size:18px;line-height:1.7}
+.wrap{max-width:1200px;padding-inline:clamp(20px,4vw,56px)}
+nav{background:#171f2cf5;backdrop-filter:blur(12px)}
+nav .wrap{padding-block:18px}
+nav b{font-size:12px;letter-spacing:.16em}
+nav .eds{gap:8px}
+nav .eds a,nav .eds span{padding:4px 10px;border:1px solid var(--line);border-radius:20px;font-size:11px}
+nav .eds .cur{background:var(--accent);color:var(--bg);border-color:var(--accent)}
+nav .eds span{opacity:.7}
+header{padding:76px 0 34px}
+header>.wrap{display:grid;grid-template-columns:1.3fr 1fr;gap:24px 64px}
+.eyebrow{grid-column:1/-1;margin:0;font-size:12px;color:var(--accent2)}
+h1{font-size:clamp(64px,8.7vw,112px);letter-spacing:-.055em;line-height:.93;margin:0}
+h1 em{color:var(--accent2)}
+.curator{margin:0;padding:22px 0 0;border-left:0;border-top:1px solid var(--line);font-size:17px;max-width:42ch;align-self:center}
+.curator strong{margin-top:18px;font-size:12px;line-height:1.7}
+.stats{grid-column:1/-1;display:grid;grid-template-columns:repeat(5,1fr);gap:20px;padding:25px 0;margin:16px 0 0}
+.stat b{font-family:Georgia,serif;font-size:38px;font-weight:400}
+.stat b.sm{font-size:25px}
+.stat span{font-size:11px;color:var(--ink3)}
+section{padding:64px 0}
+section>.wrap>p:not(.secnum):not(.count):not(.plotnote){max-width:74ch}
+.secnum,section>.wrap>p.secnum:first-of-type{font:600 12px/1.5 Arial,sans-serif;letter-spacing:.16em;color:var(--accent2);margin:0 0 18px}
+section>.wrap>h3{font:400 clamp(32px,4.6vw,54px)/1.08 Georgia,serif;letter-spacing:-.035em;max-width:29ch;margin:0 0 28px}
+.fbtns button{border-radius:24px;padding:6px 12px;font-size:13px}
+.flabel{font-size:11px;min-width:82px;color:var(--ink2)}
+#q{padding:13px 16px;font-size:16px}
+.case{border-radius:0;background:transparent;margin:0;border:0;border-top:1px solid var(--line)}
+.case:last-child{border-bottom:1px solid var(--line)}
+.case-head{padding:24px 4px;gap:20px;align-items:center}
+.case-head:hover{background:#ffffff05}
+.num{font-size:12px;min-width:24px}
+.case-thumb{display:flex;align-items:center;justify-content:center;width:112px;height:80px;flex:0 0 112px;background:#f5f7fa;border:1px solid #dce4ee;padding:7px}
+.case-thumb img{display:block;width:100%;height:100%;object-fit:contain}
+.subject{font-family:Georgia,serif;font-size:clamp(24px,2.5vw,32px);font-weight:400;letter-spacing:-.025em}
+.years{font-size:12px;margin-block:6px;color:var(--ink3)}
+.subtitle{font:15px/1.5 Arial,sans-serif;color:var(--ink2)}
+.rates{max-width:220px}
+.pill{font-size:11px;border-radius:20px;padding:5px 10px}
+.chev{margin:0 8px}
+.case.open{background:var(--card)}
+.case-body{padding:24px clamp(20px,4vw,52px) 32px}
+.case-body>.fld,.case-body>.headline{max-width:80ch}
+.case-media{margin:0 0 24px;padding:0;border:0;max-width:780px}
+.case-media>a{padding:18px;border-radius:0}
+.case-media figcaption{font-size:13px;color:var(--ink2)}
+.fld p{font-size:17px}
+.fld h4{font-size:12px;color:var(--accent2)}
+.fld.src p,.fld.note p{font-size:14px;color:var(--ink3)}
+.headline{font-size:17px}
+.plot{border-radius:0;padding:24px 18px}
+.plotnote{font-size:15px}
+.ladder{border-radius:0}
+.ladder b{font-size:14px}
+footer{background:#121a26;font-family:Arial,sans-serif;font-size:14px;color:var(--ink3)}
+a:focus-visible,button:focus-visible,input:focus-visible{outline:2px solid var(--accent2);outline-offset:4px}
+@media(max-width:760px){
+ header{padding-top:42px}
+ header>.wrap{grid-template-columns:1fr;gap:26px}
+ h1{font-size:clamp(56px,12vw,84px);max-width:10ch}
+ .curator{max-width:none}
+ .stats{grid-template-columns:repeat(3,1fr);gap:22px}
+ nav .eds{margin-left:0}
+ section{padding:42px 0}
+ .case-head{gap:12px;flex-wrap:wrap;padding:20px 0}
+ .case-id{min-width:140px}
+ .case-thumb{width:82px;height:64px;flex-basis:82px;padding:5px}
+ .rates{width:100%;max-width:none;margin-top:0;padding-left:36px;justify-content:flex-start}
+ .subject{font-size:25px}
+ .chev{display:none}
+ .case-body{padding:20px}
+}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}*{transition:none!important}}
+
 </style>
+<link rel="icon" type="image/svg+xml" href="favicon.svg">
 </head>
 <body>
 
@@ -350,6 +427,7 @@ footer p{margin:0 0 9px}
   data-search="zillow offers the pricing model that bought the houses a usd 304.4 million inventory write-down in the third quarter of 2021, and approximately a 25 per cent reduction in the company&#x27;s workforce. property united states">
   <button class="case-head" aria-expanded="false">
     <span class="num">04</span>
+    <span class="case-thumb" aria-hidden="true"><img src="assets/media/zillow-filing.webp" alt="" width="112" height="80" loading="lazy" decoding="async"></span>
     <span class="case-id">
       <span class="subject">Zillow Offers</span>
       <span class="years">2021 &middot; The decision</span>
@@ -362,9 +440,8 @@ footer p{margin:0 0 9px}
     </span>
     <span class="chev" aria-hidden="true"></span>
   </button>
-  <figure class="case-media" data-media-case="04"><a href="https://www.sec.gov/Archives/edgar/data/1617640/000161764021000087/R27.htm" aria-label="Open original source: Zillow Group"><img src="assets/media/zillow-filing.webp" alt="Extract from Zillow Group’s quarterly filing recording a $304.4 million inventory write-down associated with Zillow Offers." width="956" height="113" loading="lazy" decoding="async"></a><figcaption>Image: <a href="https://www.sec.gov/Archives/edgar/data/1617640/000161764021000087/R27.htm">Zillow Group</a>. Document excerpt for criticism and review. Limited quotation for criticism and review.</figcaption></figure>
-
   <div class="case-body">
+    <figure class="case-media" data-media-case="04"><a href="https://www.sec.gov/Archives/edgar/data/1617640/000161764021000087/R27.htm" aria-label="Open original source: Zillow Group"><img src="assets/media/zillow-filing.webp" alt="Extract from Zillow Group’s quarterly filing recording a $304.4 million inventory write-down associated with Zillow Offers." width="956" height="113" loading="lazy" decoding="async"></a><figcaption>Image: <a href="https://www.sec.gov/Archives/edgar/data/1617640/000161764021000087/R27.htm">Zillow Group</a>. Document excerpt for criticism and review. Limited quotation for criticism and review.</figcaption></figure>
     <p class="headline"><span>Headline fact</span>A USD 304.4 million inventory write-down in the third quarter of 2021, and approximately a 25 per cent reduction in the company&#x27;s workforce.</p>
     <div class="fld "><h4>What was handed over</h4><p>Price setting at scale. Zillow bought homes against its own model&#x27;s estimate of what they would later sell for.</p></div>
     <div class="fld "><h4>The lesson</h4><p>When a model&#x27;s output is a purchase rather than a recommendation, the error does not stay a prediction. It becomes inventory.</p></div>
@@ -387,6 +464,7 @@ footer p{margin:0 0 9px}
   data-search="théâtre d&#x27;opéra spatial the prize that started the argument first place, digital arts category, colorado state fair, august 2022. art united states">
   <button class="case-head" aria-expanded="false">
     <span class="num">05</span>
+    <span class="case-thumb" aria-hidden="true"><img src="assets/media/colorado-results.webp" alt="" width="112" height="80" loading="lazy" decoding="async"></span>
     <span class="case-id">
       <span class="subject">Théâtre D&#x27;opéra Spatial</span>
       <span class="years">2022 &middot; The demonstration</span>
@@ -399,9 +477,8 @@ footer p{margin:0 0 9px}
     </span>
     <span class="chev" aria-hidden="true"></span>
   </button>
-  <figure class="case-media" data-media-case="05"><a href="https://coloradostatefair.com/wp-content/uploads/2022/08/2022-Fine-Arts-First-Second-Third.pdf" aria-label="Open original source: Colorado State Fair"><img src="assets/media/colorado-results.webp" alt="Colorado State Fair results table listing Jason Allen’s Théâtre D’opéra Spatial in first place in the digital arts category." width="691" height="44" loading="lazy" decoding="async"></a><figcaption>Image: <a href="https://coloradostatefair.com/wp-content/uploads/2022/08/2022-Fine-Arts-First-Second-Third.pdf">Colorado State Fair</a>. Official results excerpt, page 1. Limited quotation for criticism and review.</figcaption></figure>
-
   <div class="case-body">
+    <figure class="case-media" data-media-case="05"><a href="https://coloradostatefair.com/wp-content/uploads/2022/08/2022-Fine-Arts-First-Second-Third.pdf" aria-label="Open original source: Colorado State Fair"><img src="assets/media/colorado-results.webp" alt="Colorado State Fair results table listing Jason Allen’s Théâtre D’opéra Spatial in first place in the digital arts category." width="691" height="44" loading="lazy" decoding="async"></a><figcaption>Image: <a href="https://coloradostatefair.com/wp-content/uploads/2022/08/2022-Fine-Arts-First-Second-Third.pdf">Colorado State Fair</a>. Official results excerpt, page 1. Limited quotation for criticism and review.</figcaption></figure>
     <p class="headline"><span>Headline fact</span>First place, digital arts category, Colorado State Fair, August 2022.</p>
     <div class="fld "><h4>What was handed over</h4><p>Image generation. The entrant used Midjourney, then selected, refined and printed the result, and entered it under a category for art created with digital technology.</p></div>
     <div class="fld "><h4>The lesson</h4><p>The argument that followed was never really about the prize. It was about who gets called the author, and nobody had agreed an answer before the entry form was filled in.</p></div>
@@ -424,6 +501,7 @@ footer p{margin:0 0 9px}
   data-search="chatgpt the thing everyone tried a reported 100 million monthly users within two months of launch, on 30 november 2022. technology united states">
   <button class="case-head" aria-expanded="false">
     <span class="num">06</span>
+    <span class="case-thumb" aria-hidden="true"><img src="assets/media/chatgpt-launch.webp" alt="" width="112" height="80" loading="lazy" decoding="async"></span>
     <span class="case-id">
       <span class="subject">ChatGPT</span>
       <span class="years">2022 &middot; The demonstration</span>
@@ -436,9 +514,8 @@ footer p{margin:0 0 9px}
     </span>
     <span class="chev" aria-hidden="true"></span>
   </button>
-  <figure class="case-media" data-media-case="06"><a href="https://openai.com/index/chatgpt/" aria-label="Open original source: OpenAI"><img src="assets/media/chatgpt-launch.webp" alt="OpenAI announcement headed Introducing ChatGPT, dated 30 November 2022." width="615" height="130" loading="lazy" decoding="async"></a><figcaption>Image: <a href="https://openai.com/index/chatgpt/">OpenAI</a>. Launch announcement excerpt. Limited quotation for criticism and review.</figcaption></figure>
-
   <div class="case-body">
+    <figure class="case-media" data-media-case="06"><a href="https://openai.com/index/chatgpt/" aria-label="Open original source: OpenAI"><img src="assets/media/chatgpt-launch.webp" alt="OpenAI announcement headed Introducing ChatGPT, dated 30 November 2022." width="615" height="130" loading="lazy" decoding="async"></a><figcaption>Image: <a href="https://openai.com/index/chatgpt/">OpenAI</a>. Launch announcement excerpt. Limited quotation for criticism and review.</figcaption></figure>
     <p class="headline"><span>Headline fact</span>A reported 100 million monthly users within two months of launch, on 30 November 2022.</p>
     <div class="fld "><h4>What was handed over</h4><p>Nothing, at first. A research preview with a text box. Every subsequent case in this archive is dated from it.</p></div>
     <div class="fld "><h4>The lesson</h4><p>Adoption is not deployment. The speed at which people tried it says nothing about what any organisation later managed to hand over successfully.</p></div>
@@ -531,6 +608,7 @@ footer p{margin:0 0 9px}
   data-search="air canada moffatt v air canada cad 812.02, ordered 14 february 2024. aviation canada">
   <button class="case-head" aria-expanded="false">
     <span class="num">09</span>
+    <span class="case-thumb" aria-hidden="true"><img src="assets/media/air-canada-decision.webp" alt="" width="112" height="80" loading="lazy" decoding="async"></span>
     <span class="case-id">
       <span class="subject">Air Canada</span>
       <span class="years">2024 &middot; The voice</span>
@@ -543,9 +621,8 @@ footer p{margin:0 0 9px}
     </span>
     <span class="chev" aria-hidden="true"></span>
   </button>
-  <figure class="case-media" data-media-case="09"><a href="https://decisions.civilresolutionbc.ca/crt/crtd/en/525448/1/document.do" aria-label="Open original source: British Columbia Civil Resolution Tribunal"><img src="assets/media/air-canada-decision.webp" alt="First-page extract from Moffatt v. Air Canada, identifying the parties, decision date and tribunal member Christopher C. Rivers." width="475" height="449" loading="lazy" decoding="async"></a><figcaption>Image: <a href="https://decisions.civilresolutionbc.ca/crt/crtd/en/525448/1/document.do">British Columbia Civil Resolution Tribunal</a>. Decision excerpt, 2024 BCCRT 149, page 1. Limited quotation for criticism and review.</figcaption></figure>
-
   <div class="case-body">
+    <figure class="case-media" data-media-case="09"><a href="https://decisions.civilresolutionbc.ca/crt/crtd/en/525448/1/document.do" aria-label="Open original source: British Columbia Civil Resolution Tribunal"><img src="assets/media/air-canada-decision.webp" alt="First-page extract from Moffatt v. Air Canada, identifying the parties, decision date and tribunal member Christopher C. Rivers." width="475" height="449" loading="lazy" decoding="async"></a><figcaption>Image: <a href="https://decisions.civilresolutionbc.ca/crt/crtd/en/525448/1/document.do">British Columbia Civil Resolution Tribunal</a>. Decision excerpt, 2024 BCCRT 149, page 1. Limited quotation for criticism and review.</figcaption></figure>
     <p class="headline"><span>Headline fact</span>CAD 812.02, ordered 14 February 2024.</p>
     <div class="fld "><h4>What was handed over</h4><p>Answering customer questions about fare policy. The airline&#x27;s website chatbot told a passenger he could buy a full fare ticket and apply for the bereavement rate retroactively within ninety days. The airline&#x27;s actual policy, on a page the chatbot linked to, said the opposite.</p></div>
     <div class="fld "><h4>The lesson</h4><p>If it speaks on your website, it speaks for you. The tribunal rejected the suggestion that the chatbot was a separate legal entity responsible for its own actions.</p></div>
@@ -603,6 +680,7 @@ footer p{margin:0 0 9px}
   data-search="alphafold the structures predicted structures for virtually all of the roughly 200 million proteins researchers have identified. the nobel prize in chemistry 2024 was awarded one half to david baker for computational protein design, and the other half jointly to demis hassabis and john jumper for protein structure prediction. science united kingdom">
   <button class="case-head" aria-expanded="false">
     <span class="num">11</span>
+    <span class="case-thumb" aria-hidden="true"><img src="assets/media/alphafold.webp" alt="" width="112" height="80" loading="lazy" decoding="async"></span>
     <span class="case-id">
       <span class="subject">AlphaFold</span>
       <span class="years">2020 to 2024 &middot; The line</span>
@@ -615,9 +693,8 @@ footer p{margin:0 0 9px}
     </span>
     <span class="chev" aria-hidden="true"></span>
   </button>
-  <figure class="case-media" data-media-case="11"><a href="https://trainingcontent.embl.org/sites/default/files/book-images/AlphaFold.png" aria-label="Open original source: EMBL-EBI Training"><img src="assets/media/alphafold.webp" alt="Ribbon representation of a protein structure on a white background, with folded regions coloured dark blue, cyan, yellow and orange." width="552" height="510" loading="lazy" decoding="async"></a><figcaption>Image: <a href="https://trainingcontent.embl.org/sites/default/files/book-images/AlphaFold.png">EMBL-EBI Training</a>. AlphaFold course. <a href="https://creativecommons.org/licenses/by/4.0/">CC BY 4.0</a>.</figcaption></figure>
-
   <div class="case-body">
+    <figure class="case-media" data-media-case="11"><a href="https://trainingcontent.embl.org/sites/default/files/book-images/AlphaFold.png" aria-label="Open original source: EMBL-EBI Training"><img src="assets/media/alphafold.webp" alt="Ribbon representation of a protein structure on a white background, with folded regions coloured dark blue, cyan, yellow and orange." width="552" height="510" loading="lazy" decoding="async"></a><figcaption>Image: <a href="https://trainingcontent.embl.org/sites/default/files/book-images/AlphaFold.png">EMBL-EBI Training</a>. AlphaFold course. <a href="https://creativecommons.org/licenses/by/4.0/">CC BY 4.0</a>.</figcaption></figure>
     <p class="headline"><span>Headline fact</span>Predicted structures for virtually all of the roughly 200 million proteins researchers have identified. The Nobel Prize in Chemistry 2024 was awarded one half to David Baker for computational protein design, and the other half jointly to Demis Hassabis and John Jumper for protein structure prediction.</p>
     <div class="fld "><h4>What was handed over</h4><p>Structure prediction from amino acid sequence, end to end. A problem that had stood for about fifty years.</p></div>
     <div class="fld "><h4>The lesson</h4><p>This is what a handover looks like when the output can be checked against reality. The predictions were measurable against experimentally determined structures, so the claim could be tested rather than asserted.</p></div>
