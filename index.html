@@ -240,6 +240,16 @@ a:focus-visible,button:focus-visible,input:focus-visible{outline:2px solid var(-
 }
 @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}*{transition:none!important}}
 
+
+/* Official brand identity thumbnails */
+.case-thumb{width:144px;height:100px;flex-basis:144px}
+.brand-thumb{background:var(--brand-surface,#fff);padding:16px;border-color:transparent}
+.brand-thumb img{object-fit:contain;max-height:64px}
+.brand-media{max-width:560px}
+.case-media>a.brand-art{display:flex;align-items:center;justify-content:center;min-height:180px;padding:36px;background:var(--brand-surface,#fff)}
+.brand-art img{width:100%;height:110px;max-width:360px;object-fit:contain}
+@media(max-width:760px){.case-thumb{width:82px;height:64px;flex-basis:82px}.brand-thumb{padding:9px}.brand-thumb img{max-height:46px}.case-media>a.brand-art{min-height:140px;padding:24px}}
+
 </style>
 <link rel="icon" type="image/svg+xml" href="favicon.svg">
 </head>
@@ -322,6 +332,7 @@ a:focus-visible,button:focus-visible,input:focus-visible{outline:2px solid var(-
   data-search="md anderson and ibm watson oncology expert advisor usd 62.1 million, spent between june 2012 and october 2016. healthcare united states">
   <button class="case-head" aria-expanded="false">
     <span class="num">01</span>
+    <span class="case-thumb brand-thumb" style="--brand-surface:#101010" aria-hidden="true"><img src="assets/media/brands/ibm.svg" alt="" width="160" height="100" loading="lazy" decoding="async"></span>
     <span class="case-id">
       <span class="subject">MD Anderson and IBM Watson</span>
       <span class="years">2012 to 2016 &middot; The decision</span>
@@ -335,6 +346,10 @@ a:focus-visible,button:focus-visible,input:focus-visible{outline:2px solid var(-
     <span class="chev" aria-hidden="true"></span>
   </button>
   <div class="case-body">
+    <figure class="case-media brand-media">
+      <a class="brand-art" style="--brand-surface:#101010" href="https://github.com/carbon-design-system/carbon-for-ibm-dotcom/blob/main/packages/styles/icons/svg/IBM-8bar-logo--h23-white.svg" target="_blank" rel="noopener noreferrer"><img src="assets/media/brands/ibm.svg" alt="IBM eight-bar wordmark in white." width="480" height="180" loading="lazy" decoding="async"></a>
+      <figcaption>Brand identity: IBM. Mark owned by International Business Machines Corporation. <a href="https://github.com/carbon-design-system/carbon-for-ibm-dotcom/blob/main/packages/styles/icons/svg/IBM-8bar-logo--h23-white.svg" target="_blank" rel="noopener noreferrer">Official source</a>. Editorial identification; no open licence or endorsement claimed.</figcaption>
+    </figure>
     <p class="headline"><span>Headline fact</span>USD 62.1 million, spent between June 2012 and October 2016.</p>
     <div class="fld "><h4>What was handed over</h4><p>MD Anderson Cancer Center set out to encode the judgement of its senior oncologists into a decision support tool built on IBM Watson, so that community oncologists elsewhere could treat to the same standard. The original contract was USD 2.4 million for six months. It was extended twelve times.</p></div>
     <div class="fld "><h4>The lesson</h4><p>A system that cannot read the records your clinicians actually use is not a decision support tool. It is a demonstration with a budget.</p></div>
@@ -357,6 +372,7 @@ a:focus-visible,button:focus-visible,input:focus-visible{outline:2px solid var(-
   data-search="alphago and lee sedol move 37 4 games to 1, seoul, march 2016. research south korea">
   <button class="case-head" aria-expanded="false">
     <span class="num">02</span>
+    <span class="case-thumb brand-thumb" style="--brand-surface:#ffffff" aria-hidden="true"><img src="assets/media/brands/deepmind.svg" alt="" width="160" height="100" loading="lazy" decoding="async"></span>
     <span class="case-id">
       <span class="subject">AlphaGo and Lee Sedol</span>
       <span class="years">2016 &middot; The demonstration</span>
@@ -370,6 +386,10 @@ a:focus-visible,button:focus-visible,input:focus-visible{outline:2px solid var(-
     <span class="chev" aria-hidden="true"></span>
   </button>
   <div class="case-body">
+    <figure class="case-media brand-media">
+      <a class="brand-art" style="--brand-surface:#ffffff" href="https://deepmind.google/" target="_blank" rel="noopener noreferrer"><img src="assets/media/brands/deepmind.svg" alt="Google DeepMind wordmark." width="480" height="180" loading="lazy" decoding="async"></a>
+      <figcaption>Brand identity: Google DeepMind. Mark owned by Google DeepMind. <a href="https://deepmind.google/" target="_blank" rel="noopener noreferrer">Official source</a>. Editorial identification; no open licence or endorsement claimed.</figcaption>
+    </figure>
     <p class="headline"><span>Headline fact</span>4 games to 1, Seoul, March 2016.</p>
     <div class="fld "><h4>What was handed over</h4><p>Move selection, entirely. For the duration of each game, no human chose a move on the machine&#x27;s behalf. A DeepMind engineer placed the stones.</p></div>
     <div class="fld "><h4>The lesson</h4><p>A narrow task, completely handed over, under rules that never change, is where machines are strongest. Almost no business problem looks like this.</p></div>
@@ -392,6 +412,7 @@ a:focus-visible,button:focus-visible,input:focus-visible{outline:2px solid var(-
   data-search="amazon&#x27;s recruiting tool the screener that learned the past scrapped. reported by reuters in october 2018. recruitment united states">
   <button class="case-head" aria-expanded="false">
     <span class="num">03</span>
+    <span class="case-thumb brand-thumb" style="--brand-surface:#ffffff" aria-hidden="true"><img src="assets/media/brands/amazon.png" alt="" width="160" height="100" loading="lazy" decoding="async"></span>
     <span class="case-id">
       <span class="subject">Amazon&#x27;s recruiting tool</span>
       <span class="years">2014 to 2018 &middot; The decision</span>
@@ -405,6 +426,10 @@ a:focus-visible,button:focus-visible,input:focus-visible{outline:2px solid var(-
     <span class="chev" aria-hidden="true"></span>
   </button>
   <div class="case-body">
+    <figure class="case-media brand-media">
+      <a class="brand-art" style="--brand-surface:#ffffff" href="https://press.aboutamazon.com/logos?p=4" target="_blank" rel="noopener noreferrer"><img src="assets/media/brands/amazon.png" alt="Amazon wordmark with an orange smile beneath the lettering." width="480" height="180" loading="lazy" decoding="async"></a>
+      <figcaption>Brand identity: Amazon. Mark owned by Amazon.com, Inc.. <a href="https://press.aboutamazon.com/logos?p=4" target="_blank" rel="noopener noreferrer">Official source</a>. Editorial identification; no open licence or endorsement claimed.</figcaption>
+    </figure>
     <p class="headline"><span>Headline fact</span>Scrapped. Reported by Reuters in October 2018.</p>
     <div class="fld "><h4>What was handed over</h4><p>Candidate ranking. The system scored applicants so that recruiters could work from a shortlist.</p></div>
     <div class="fld "><h4>The lesson</h4><p>A model trained on a decade of your own hiring will reproduce a decade of your own hiring, including the parts you would not defend out loud.</p></div>
@@ -538,6 +563,7 @@ a:focus-visible,button:focus-visible,input:focus-visible{outline:2px solid var(-
   data-search="the hollywood strikes what the machine does not get ai terms written into the writers guild and sag-aftra agreements, 2023. entertainment united states">
   <button class="case-head" aria-expanded="false">
     <span class="num">07</span>
+    <span class="case-thumb brand-thumb" style="--brand-surface:#ffffff" aria-hidden="true"><img src="assets/media/brands/wga.png" alt="" width="160" height="100" loading="lazy" decoding="async"></span>
     <span class="case-id">
       <span class="subject">The Hollywood strikes</span>
       <span class="years">2023 &middot; The line</span>
@@ -551,6 +577,10 @@ a:focus-visible,button:focus-visible,input:focus-visible{outline:2px solid var(-
     <span class="chev" aria-hidden="true"></span>
   </button>
   <div class="case-body">
+    <figure class="case-media brand-media">
+      <a class="brand-art" style="--brand-surface:#ffffff" href="https://www.wga.org/" target="_blank" rel="noopener noreferrer"><img src="assets/media/brands/wga.png" alt="Writers Guild of America West logo." width="480" height="180" loading="lazy" decoding="async"></a>
+      <figcaption>Brand identity: Writers Guild of America West. Mark owned by Writers Guild of America West. <a href="https://www.wga.org/" target="_blank" rel="noopener noreferrer">Official source</a>. Editorial identification; no open licence or endorsement claimed.</figcaption>
+    </figure>
     <p class="headline"><span>Headline fact</span>AI terms written into the Writers Guild and SAG-AFTRA agreements, 2023.</p>
     <div class="fld "><h4>What was handed over</h4><p>By negotiation, very little. The agreements set out where generative AI may be used in writing and performance, what must be disclosed, and what consent and compensation apply to digital replicas.</p></div>
     <div class="fld "><h4>The lesson</h4><p>This is the only case in the edition where a limit was agreed in advance rather than discovered afterwards. Every other case here found its boundary by crossing it.</p></div>
@@ -573,6 +603,7 @@ a:focus-visible,button:focus-visible,input:focus-visible{outline:2px solid var(-
   data-search="sports illustrated the writers who did not exist the author profiles were removed from the site after futurism approached the publisher, in november 2023. media united states">
   <button class="case-head" aria-expanded="false">
     <span class="num">08</span>
+    <span class="case-thumb brand-thumb" style="--brand-surface:#c60022" aria-hidden="true"><img src="assets/media/brands/si.svg" alt="" width="160" height="100" loading="lazy" decoding="async"></span>
     <span class="case-id">
       <span class="subject">Sports Illustrated</span>
       <span class="years">2023 &middot; The craft</span>
@@ -586,6 +617,10 @@ a:focus-visible,button:focus-visible,input:focus-visible{outline:2px solid var(-
     <span class="chev" aria-hidden="true"></span>
   </button>
   <div class="case-body">
+    <figure class="case-media brand-media">
+      <a class="brand-art" style="--brand-surface:#c60022" href="https://www.si.com/" target="_blank" rel="noopener noreferrer"><img src="assets/media/brands/si.svg" alt="Sports Illustrated wordmark." width="480" height="180" loading="lazy" decoding="async"></a>
+      <figcaption>Brand identity: Sports Illustrated. Mark owned by ABG-SI LLC. <a href="https://www.si.com/" target="_blank" rel="noopener noreferrer">Official source</a>. Editorial identification; no open licence or endorsement claimed.</figcaption>
+    </figure>
     <p class="headline"><span>Headline fact</span>The author profiles were removed from the site after Futurism approached the publisher, in November 2023.</p>
     <div class="fld "><h4>What was handed over</h4><p>Product review content, supplied by a third party, published under bylines belonging to people who could not be found, with portraits traced to a marketplace selling AI-generated headshots.</p></div>
     <div class="fld "><h4>The lesson</h4><p>The reputational damage attached to the fake person, not to the use of a tool. Nobody minded the software. They minded being told a human wrote it.</p></div>
@@ -645,6 +680,7 @@ a:focus-visible,button:focus-visible,input:focus-visible{outline:2px solid var(-
   data-search="klarna the work of 700 agents klarna reported its ai assistant handled two-thirds of service chats in its first month, equivalent to the work of 700 full-time agents. financial services sweden">
   <button class="case-head" aria-expanded="false">
     <span class="num">10</span>
+    <span class="case-thumb brand-thumb" style="--brand-surface:#ffb3c7" aria-hidden="true"><img src="assets/media/brands/klarna.svg" alt="" width="160" height="100" loading="lazy" decoding="async"></span>
     <span class="case-id">
       <span class="subject">Klarna</span>
       <span class="years">2024 to 2026 &middot; The voice</span>
@@ -658,6 +694,10 @@ a:focus-visible,button:focus-visible,input:focus-visible{outline:2px solid var(-
     <span class="chev" aria-hidden="true"></span>
   </button>
   <div class="case-body">
+    <figure class="case-media brand-media">
+      <a class="brand-art" style="--brand-surface:#ffb3c7" href="https://www.klarna.com/international/press/" target="_blank" rel="noopener noreferrer"><img src="assets/media/brands/klarna.svg" alt="Klarna wordmark in dark lettering." width="480" height="180" loading="lazy" decoding="async"></a>
+      <figcaption>Brand identity: Klarna. Mark owned by Klarna Bank AB. <a href="https://www.klarna.com/international/press/" target="_blank" rel="noopener noreferrer">Official source</a>. Editorial identification; no open licence or endorsement claimed.</figcaption>
+    </figure>
     <p class="headline"><span>Headline fact</span>Klarna reported its AI assistant handled two-thirds of service chats in its first month, equivalent to the work of 700 full-time agents.</p>
     <div class="fld "><h4>What was handed over</h4><p>Front-line customer service, at volume, with the escalation path to a human narrowed to the point where it stopped functioning as one.</p></div>
     <div class="fld "><h4>The lesson</h4><p>The average held while the thing that mattered broke. Routine volume was large enough to hide deterioration on the cases where the customer was in distress.</p></div>
@@ -717,6 +757,7 @@ a:focus-visible,button:focus-visible,input:focus-visible{outline:2px solid var(-
   data-search="coca-cola holidays are coming, again in system1 audience testing, the 2025 advert scored a maximum 5.9-star rating and 97 per cent on distinctiveness. advertising global">
   <button class="case-head" aria-expanded="false">
     <span class="num">12</span>
+    <span class="case-thumb brand-thumb" style="--brand-surface:#ffffff" aria-hidden="true"><img src="assets/media/brands/coca-cola.png" alt="" width="160" height="100" loading="lazy" decoding="async"></span>
     <span class="case-id">
       <span class="subject">Coca-Cola</span>
       <span class="years">2024 and 2025 &middot; The craft</span>
@@ -730,6 +771,10 @@ a:focus-visible,button:focus-visible,input:focus-visible{outline:2px solid var(-
     <span class="chev" aria-hidden="true"></span>
   </button>
   <div class="case-body">
+    <figure class="case-media brand-media">
+      <a class="brand-art" style="--brand-surface:#ffffff" href="https://www.coca-cola.com/gb/en" target="_blank" rel="noopener noreferrer"><img src="assets/media/brands/coca-cola.png" alt="Coca-Cola script wordmark." width="480" height="180" loading="lazy" decoding="async"></a>
+      <figcaption>Brand identity: Coca-Cola. Mark owned by The Coca-Cola Company. <a href="https://www.coca-cola.com/gb/en" target="_blank" rel="noopener noreferrer">Official source</a>. Editorial identification; no open licence or endorsement claimed.</figcaption>
+    </figure>
     <p class="headline"><span>Headline fact</span>In System1 audience testing, the 2025 advert scored a maximum 5.9-star rating and 97 per cent on distinctiveness.</p>
     <div class="fld "><h4>What was handed over</h4><p>Production of the brand&#x27;s most recognisable annual advertising. The 2024 campaign was made with three AI studios. The 2025 campaign returned to the approach with animals rather than people, which sidestepped the uncanny valley problem of the first attempt.</p></div>
     <div class="fld "><h4>The lesson</h4><p>The audience that shouts and the audience that is measured are not the same audience, and in this case they disagreed completely.</p></div>
@@ -752,6 +797,7 @@ a:focus-visible,button:focus-visible,input:focus-visible{outline:2px solid var(-
   data-search="humane ai pin the device that demonstrated well the ai pin business was shut down in february 2025, with hp acquiring most of the company&#x27;s assets for usd 116 million, after humane had raised a reported usd 230 million. consumer hardware united states">
   <button class="case-head" aria-expanded="false">
     <span class="num">13</span>
+    <span class="case-thumb brand-thumb" style="--brand-surface:#ffffff" aria-hidden="true"><img src="assets/media/brands/humane.png" alt="" width="160" height="100" loading="lazy" decoding="async"></span>
     <span class="case-id">
       <span class="subject">Humane AI Pin</span>
       <span class="years">2024 to 2025 &middot; The demonstration</span>
@@ -765,6 +811,10 @@ a:focus-visible,button:focus-visible,input:focus-visible{outline:2px solid var(-
     <span class="chev" aria-hidden="true"></span>
   </button>
   <div class="case-body">
+    <figure class="case-media brand-media">
+      <a class="brand-art" style="--brand-surface:#ffffff" href="https://www.prnewswire.com/news-releases/humane-inc-completes-series-a-funding-round-301138014.html" target="_blank" rel="noopener noreferrer"><img src="assets/media/brands/humane.png" alt="Humane symbol and hu.ma.ne wordmark." width="480" height="180" loading="lazy" decoding="async"></a>
+      <figcaption>Brand identity: Humane. Mark owned by Humane, Inc.. <a href="https://www.prnewswire.com/news-releases/humane-inc-completes-series-a-funding-round-301138014.html" target="_blank" rel="noopener noreferrer">Official source</a>. Editorial identification; no open licence or endorsement claimed.</figcaption>
+    </figure>
     <p class="headline"><span>Headline fact</span>The AI Pin business was shut down in February 2025, with HP acquiring most of the company&#x27;s assets for USD 116 million, after Humane had raised a reported USD 230 million.</p>
     <div class="fld "><h4>What was handed over</h4><p>The interface itself. The proposition was that a screenless assistant could take over the everyday tasks people use a phone for.</p></div>
     <div class="fld "><h4>The lesson</h4><p>A demonstration optimised for a stage is not a product. The gap only appears when a reviewer uses it as their actual phone for a week.</p></div>
@@ -787,6 +837,7 @@ a:focus-visible,button:focus-visible,input:focus-visible{outline:2px solid var(-
   data-search="deloitte australia the report with the invented references a partial refund of the aud 440,000 paid by the australian government, agreed in october 2025. professional services australia">
   <button class="case-head" aria-expanded="false">
     <span class="num">14</span>
+    <span class="case-thumb brand-thumb" style="--brand-surface:#101010" aria-hidden="true"><img src="assets/media/brands/deloitte.svg" alt="" width="160" height="100" loading="lazy" decoding="async"></span>
     <span class="case-id">
       <span class="subject">Deloitte Australia</span>
       <span class="years">2025 &middot; The craft</span>
@@ -800,6 +851,10 @@ a:focus-visible,button:focus-visible,input:focus-visible{outline:2px solid var(-
     <span class="chev" aria-hidden="true"></span>
   </button>
   <div class="case-body">
+    <figure class="case-media brand-media">
+      <a class="brand-art" style="--brand-surface:#101010" href="https://www.deloitte.com/au/en.html" target="_blank" rel="noopener noreferrer"><img src="assets/media/brands/deloitte.svg" alt="Deloitte wordmark with a green dot." width="480" height="180" loading="lazy" decoding="async"></a>
+      <figcaption>Brand identity: Deloitte. Mark owned by Deloitte Touche Tohmatsu Limited. <a href="https://www.deloitte.com/au/en.html" target="_blank" rel="noopener noreferrer">Official source</a>. Editorial identification; no open licence or endorsement claimed.</figcaption>
+    </figure>
     <p class="headline"><span>Headline fact</span>A partial refund of the AUD 440,000 paid by the Australian government, agreed in October 2025.</p>
     <div class="fld "><h4>What was handed over</h4><p>Drafting support on a 237-page independent assurance review for the Department of Employment and Workplace Relations, examining the IT system used to automate penalties in Australia&#x27;s welfare system.</p></div>
     <div class="fld "><h4>The lesson</h4><p>The output was fluent, structured and properly formatted, which is exactly why nobody checked it. Fluency is not accuracy, and a citation is a claim like any other.</p></div>
@@ -822,6 +877,7 @@ a:focus-visible,button:focus-visible,input:focus-visible{outline:2px solid var(-
   data-search="taco bell eighteen thousand waters voice ai was live in more than 500 us drive-thrus and had taken over two million orders at the point the company said it was rethinking the rollout. food service united states">
   <button class="case-head" aria-expanded="false">
     <span class="num">15</span>
+    <span class="case-thumb brand-thumb" style="--brand-surface:#ffffff" aria-hidden="true"><img src="assets/media/brands/taco-bell.png" alt="" width="160" height="100" loading="lazy" decoding="async"></span>
     <span class="case-id">
       <span class="subject">Taco Bell</span>
       <span class="years">2023 to now &middot; The voice</span>
@@ -835,6 +891,10 @@ a:focus-visible,button:focus-visible,input:focus-visible{outline:2px solid var(-
     <span class="chev" aria-hidden="true"></span>
   </button>
   <div class="case-body">
+    <figure class="case-media brand-media">
+      <a class="brand-art" style="--brand-surface:#ffffff" href="https://www.amrest.eu/en/media/taco-bell-press-kit" target="_blank" rel="noopener noreferrer"><img src="assets/media/brands/taco-bell.png" alt="Taco Bell bell symbol and wordmark in purple and black." width="480" height="180" loading="lazy" decoding="async"></a>
+      <figcaption>Brand identity: Taco Bell. Mark owned by Taco Bell IP Holder, LLC. <a href="https://www.amrest.eu/en/media/taco-bell-press-kit" target="_blank" rel="noopener noreferrer">Official source</a>. Editorial identification; no open licence or endorsement claimed.</figcaption>
+    </figure>
     <p class="headline"><span>Headline fact</span>Voice AI was live in more than 500 US drive-thrus and had taken over two million orders at the point the company said it was rethinking the rollout.</p>
     <div class="fld "><h4>What was handed over</h4><p>Order taking at the drive-thru, without a human intermediary, on a platform with menu logic attached.</p></div>
     <div class="fld "><h4>The lesson</h4><p>A system open to the public will be probed by the public. The viral failures were not edge cases discovered by accident. They were found deliberately, by customers trying to reach a human.</p></div>
@@ -961,3 +1021,4 @@ a:focus-visible,button:focus-visible,input:focus-visible{outline:2px solid var(-
 </script>
 </body>
 </html>
+
