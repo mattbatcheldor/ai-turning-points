@@ -1,0 +1,869 @@
+<!doctype html>
+<html lang="en-GB">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>AI Turning Points | Edition 01, Fame first</title>
+<meta name="description" content="An editorial archive of what businesses handed to machines, what stayed human and what the evidence can prove. Edition 01, Fame first: fifteen cases, 2012 to 2025.">
+<meta name="theme-color" content="#1B1710">
+<style>
+:root{
+  --bg:#1B1710; --bg2:#221D15; --card:#262018; --line:#3A3225;
+  --ink:#F2EDE4; --ink2:#BFB5A3; --ink3:#8C8371;
+  --accent:#C9913F; --accent2:#E3B468;
+  --ev4:#C9913F; --ev3:#A8894E; --ev2:#8A7B5C; --ev1:#6E6752; --ev0:#4E4A3E;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+[id]{scroll-margin-top:84px}
+body{margin:0;background:var(--bg);color:var(--ink);
+ font-family:Georgia,"Iowan Old Style","Times New Roman",serif;
+ font-size:17px;line-height:1.62;-webkit-font-smoothing:antialiased}
+.wrap{max-width:760px;margin:0 auto;padding:0 20px}
+a{color:var(--accent2);text-decoration:none;border-bottom:1px solid rgba(201,145,63,.4)}
+a:hover{border-bottom-color:var(--accent2)}
+h1,h2,h3,h4,.ui{font-family:ui-sans-serif,-apple-system,"Segoe UI",Helvetica,Arial,sans-serif}
+
+nav{position:sticky;top:0;z-index:40;background:var(--bg);
+ border-bottom:1px solid var(--line)}
+nav .wrap{display:flex;gap:18px;align-items:center;flex-wrap:wrap;padding-top:11px;padding-bottom:11px}
+nav b{font-family:ui-sans-serif,-apple-system,"Segoe UI",sans-serif;font-size:13px;
+ letter-spacing:.14em;text-transform:uppercase;color:var(--ink)}
+nav .eds{display:flex;gap:10px;flex-wrap:wrap;margin-left:auto}
+nav .eds a,nav .eds span{font-family:ui-sans-serif,-apple-system,sans-serif;font-size:12px;
+ letter-spacing:.08em;border:0;color:var(--ink3)}
+nav .eds .cur{color:var(--accent2)}
+nav .eds span{opacity:.45;cursor:not-allowed}
+
+header{padding:66px 0 30px}
+.eyebrow{font-family:ui-sans-serif,-apple-system,sans-serif;font-size:12px;letter-spacing:.2em;
+ text-transform:uppercase;color:var(--ink3);margin-bottom:26px}
+h1{font-family:Georgia,serif;font-size:clamp(44px,9vw,76px);line-height:.98;margin:0 0 26px;
+ font-weight:400;letter-spacing:-.02em}
+h1 em{color:var(--accent);font-style:italic}
+.curator{border-left:2px solid var(--accent);padding-left:18px;color:var(--ink2);
+ font-size:16px;margin:0 0 30px}
+.curator strong{display:block;color:var(--ink);font-family:ui-sans-serif,sans-serif;
+ font-size:12px;letter-spacing:.12em;text-transform:uppercase;margin-top:9px;font-weight:600}
+.stats{display:flex;gap:30px;flex-wrap:wrap;border-top:1px solid var(--line);
+ border-bottom:1px solid var(--line);padding:20px 0;margin-bottom:10px}
+.stat b{display:block;font-family:ui-sans-serif,sans-serif;font-size:27px;color:var(--accent2);
+ line-height:1.1}
+.stat b.sm{font-size:19px;padding-top:7px}
+.stat span{font-family:ui-sans-serif,sans-serif;font-size:11px;letter-spacing:.11em;
+ text-transform:uppercase;color:var(--ink3)}
+
+section{padding:52px 0;border-top:1px solid var(--line)}
+.secnum{font-family:ui-sans-serif,sans-serif;font-size:11px;letter-spacing:.2em;
+ text-transform:uppercase;color:var(--ink3);margin-bottom:16px}
+h2{font-size:30px;line-height:1.2;margin:0 0 22px;font-weight:600;letter-spacing:-.01em}
+h3{font-size:19px;margin:30px 0 10px;font-weight:600;color:var(--ink)}
+p{margin:0 0 17px}
+section > .wrap > p:first-of-type{font-size:18.5px}
+ul{margin:0 0 17px;padding-left:20px}
+li{margin-bottom:7px}
+strong{color:#fff;font-weight:600}
+
+.plot{background:var(--bg2);border:1px solid var(--line);border-radius:4px;padding:16px 8px 8px;margin:26px 0;overflow-x:auto;-webkit-overflow-scrolling:touch}
+.plot svg{width:100%;height:auto;display:block;min-width:580px}
+.plot .g{stroke:var(--line);stroke-width:1}
+.plot .ax{font-family:ui-sans-serif,sans-serif;font-size:10.5px;fill:var(--ink3);letter-spacing:.06em}
+.plot .yax{font-size:10px}
+.plot .axttl{font-family:ui-sans-serif,sans-serif;font-size:10.5px;fill:var(--ink3);letter-spacing:.1em;text-transform:uppercase}
+.plot circle{fill:var(--accent);opacity:.88;cursor:pointer;transition:all .15s}
+.plot .pt:hover circle{fill:var(--accent2);r:17}
+.plot text:not(.ax):not(.axttl){font-family:ui-sans-serif,sans-serif;font-size:11px;
+ fill:#1B1710;font-weight:700;text-anchor:middle;pointer-events:none}
+.plotnote{font-size:14.5px;color:var(--ink3);margin-top:-8px}
+
+.filters{margin:26px 0 20px}
+.fgroup{display:flex;gap:12px;align-items:baseline;margin-bottom:9px;flex-wrap:wrap}
+.flabel{font-family:ui-sans-serif,sans-serif;font-size:10.5px;letter-spacing:.13em;
+ text-transform:uppercase;color:var(--ink3);min-width:66px}
+.fbtns{display:flex;gap:6px;flex-wrap:wrap;flex:1}
+.fbtns button{font-family:ui-sans-serif,sans-serif;font-size:12.5px;background:transparent;
+ color:var(--ink2);border:1px solid var(--line);border-radius:3px;padding:4px 10px;cursor:pointer;
+ transition:all .12s}
+.fbtns button:hover{border-color:var(--ink3);color:var(--ink)}
+.fbtns button.on{background:var(--accent);border-color:var(--accent);color:#1B1710;font-weight:600}
+#q{width:100%;background:var(--bg2);border:1px solid var(--line);border-radius:3px;
+ padding:9px 12px;color:var(--ink);font-family:ui-sans-serif,sans-serif;font-size:14px;margin-top:4px}
+#q:focus{outline:none;border-color:var(--accent)}
+.count{font-family:ui-sans-serif,sans-serif;font-size:12px;letter-spacing:.1em;
+ text-transform:uppercase;color:var(--ink3);margin:16px 0 12px}
+
+.case{background:var(--card);border:1px solid var(--line);border-radius:4px;margin-bottom:9px;
+ overflow:hidden}
+.case.hide{display:none}
+.case.flash{border-color:var(--accent)}
+.case-head{width:100%;display:flex;gap:14px;align-items:flex-start;background:transparent;
+ border:0;padding:16px 17px;cursor:pointer;text-align:left;color:inherit}
+.case-head:hover{background:rgba(201,145,63,.05)}
+.num{font-family:ui-sans-serif,sans-serif;font-size:11px;color:var(--ink3);padding-top:3px;
+ letter-spacing:.08em;flex-shrink:0}
+.case-id{flex:1;min-width:0}
+.subject{display:block;font-family:ui-sans-serif,sans-serif;font-size:15.5px;font-weight:600;
+ color:var(--ink);line-height:1.35}
+.years{display:block;font-family:ui-sans-serif,sans-serif;font-size:11.5px;color:var(--ink3);
+ letter-spacing:.05em;margin:3px 0 5px}
+.subtitle{display:block;font-style:italic;color:var(--ink2);font-size:16px}
+.rates{display:flex;gap:6px;flex-wrap:wrap;justify-content:flex-end;flex-shrink:0;max-width:200px}
+.pill{font-family:ui-sans-serif,sans-serif;font-size:10.5px;letter-spacing:.06em;padding:3px 8px;
+ border-radius:2px;white-space:nowrap;font-weight:600}
+.ev{color:#1B1710}
+.ev-4{background:var(--ev4)} .ev-3{background:var(--ev3)} .ev-2{background:var(--ev2)}
+.ev-1{background:var(--ev1);color:var(--ink)} .ev-0{background:var(--ev0);color:var(--ink2)}
+.hv{background:transparent;border:1px solid var(--line);color:var(--ink2)}
+.live{background:#7A2E2E;color:#FFE8E0}
+.chev{width:9px;height:9px;border-right:1.6px solid var(--ink3);border-bottom:1.6px solid var(--ink3);
+ transform:rotate(45deg);margin-top:8px;flex-shrink:0;transition:transform .2s}
+.case-head[aria-expanded="true"] .chev{transform:rotate(-135deg)}
+.case-body{display:none;padding:2px 17px 22px;border-top:1px solid var(--line);margin-top:-1px}
+.case.open .case-body{display:block}
+.headline{font-family:ui-sans-serif,sans-serif;font-size:15px;color:var(--accent2);
+ background:rgba(201,145,63,.07);border-left:2px solid var(--accent);padding:12px 14px;
+ margin:18px 0 22px}
+.headline span{display:block;font-size:10px;letter-spacing:.15em;text-transform:uppercase;
+ color:var(--ink3);margin-bottom:5px}
+.fld{margin-bottom:19px}
+.fld h4{font-size:10.5px;letter-spacing:.14em;text-transform:uppercase;color:var(--ink3);
+ margin:0 0 6px;font-weight:600}
+.fld p{margin:0;font-size:16.5px}
+.fld.take{border-left:2px solid var(--line);padding-left:15px}
+.fld.take p{font-style:italic;color:var(--ink)}
+.fld.src p,.fld.note p{font-size:14.5px;color:var(--ink3)}
+.fld.note{border-top:1px dashed var(--line);padding-top:14px}
+
+.ladder{border:1px solid var(--line);border-radius:4px;padding:4px 18px;margin:20px 0;background:var(--bg2)}
+.ladder div{padding:11px 0;border-bottom:1px solid var(--line)}
+.ladder div:last-child{border-bottom:0}
+.ladder b{font-family:ui-sans-serif,sans-serif;font-size:13.5px;color:var(--accent2);
+ display:inline-block;min-width:140px;font-weight:600}
+.ladder span{font-size:15.5px;color:var(--ink2)}
+.dist{font-family:ui-sans-serif,sans-serif;font-size:14px;color:var(--ink2);
+ background:var(--bg2);border-left:2px solid var(--accent);padding:12px 15px;margin:0 0 20px}
+
+footer{border-top:1px solid var(--line);padding:38px 0 52px;color:var(--ink3);font-size:14px}
+footer p{margin:0 0 9px}
+.totop{font-family:ui-sans-serif,sans-serif;font-size:12px;letter-spacing:.08em}
+@media(max-width:620px){
+  nav .wrap{padding-top:9px;padding-bottom:9px;gap:9px}
+  nav .eds{margin-left:0;width:100%;gap:9px}
+  nav .eds a,nav .eds span{font-size:11px}
+  [id]{scroll-margin-top:104px}
+  header{padding-top:44px}
+  .case-head{flex-wrap:wrap}
+  .rates{max-width:none;width:100%;justify-content:flex-start;margin-top:10px}
+  .chev{display:none}
+  .flabel{min-width:0;width:100%}
+}
+</style>
+</head>
+<body>
+
+<nav><div class="wrap">
+  <b>AI Turning Points</b>
+  <div class="eds">
+    <a class="cur" href="#top">01 Fame</a>
+    <span>02 Proof</span><span>03 Money</span><span>04 Work</span>
+    <span>05 Failure</span><span>06 Human</span><span>07 Edge</span><span>Index</span>
+  </div>
+</div></nav>
+
+<header id="top"><div class="wrap">
+  <p class="eyebrow">The AI archive / Edition 01 / Fame first</p>
+  <h1>AI Turning <em>Points.</em></h1>
+  <p class="curator">What was handed to the machine, what stayed human, and what the evidence can actually prove. Fifteen cases everybody cites, read against the record rather than the retelling.
+  <strong>Matthew Batcheldor, Curator</strong></p>
+  <div class="stats">
+    <div class="stat"><b>15</b><span>Cases</span></div>
+    <div class="stat"><b class="sm">2012 to 2025</b><span>Span</span></div>
+    <div class="stat"><b>1</b><span>Modelled effect</span></div>
+    <div class="stat"><b>0</b><span>Rated replaced</span></div>
+    <div class="stat"><b>2</b><span>Live cases</span></div>
+  </div>
+</div></header>
+
+<section><div class="wrap">
+  <p class="secnum">01 / The finding</p>
+  <h3>The famous cases tell you almost nothing. The record elsewhere does.</h3>
+<p>Every case in this edition was chosen for one reason: people cite it. These are the AI stories told in keynotes, board papers and LinkedIn posts, the ones repeated so often that the detail has worn smooth.</p>
+<p>Read the sources rather than the retellings and two things stand out.</p>
+<p>The first is where the evidence lives. In almost every case here, the usable proof does not come from the company. It comes from a tribunal ruling, a university audit, a quarterly filing, a Nobel citation, a news investigation or a government refund. The announcements supplied the fame. Somebody else supplied the facts.</p>
+<p>The second is harder to argue with. Five levels of handover are rated in this archive, from augmented to replaced. Across the fifteen most famous cases in modern AI, <strong>not one reaches replaced.</strong> The stories are told as replacement. The record does not contain a completed one. The deepest handover here was reversed in public by the company that made it.</p>
+<p>That is not an argument that AI does not work. Two cases in this edition can prove real effects, and one of them won a Nobel Prize. It is an argument that fame and evidence are not the same thing, and that the gap between them is where most of the money gets spent.</p>
+</div></section>
+
+<section><div class="wrap">
+  <p class="secnum">02 / The patterns</p>
+  <h3>Five things businesses hand over</h3>
+<p>Fifteen cases, five mechanisms. Choose one to filter the archive.</p>
+<p><strong>The demonstration.</strong> Show the machine doing something remarkable, outside live operations.<br>AlphaGo 2016, ChatGPT 2022, Colorado State Fair 2022, Humane 2025</p>
+<p><strong>The decision.</strong> Let the model make calls that cost real money.<br>MD Anderson 2012, Amazon 2018, Zillow 2021</p>
+<p><strong>The voice.</strong> Let the machine speak as the company.<br>Air Canada 2024, Klarna 2024, Taco Bell 2025</p>
+<p><strong>The craft.</strong> Let the machine make the thing people actually see.<br>Sports Illustrated 2023, Coca-Cola 2024, Deloitte 2025</p>
+<p><strong>The line.</strong> Decide in advance what the machine does not get.<br>Hollywood 2023, AlphaFold 2024</p>
+</div></section>
+
+<section><div class="wrap">
+  <p class="secnum">03 / The screening room</p>
+  <h3>Watch the work</h3>
+<p>Four films to start with. Watch for the moment the handover happens, before you read the case.</p>
+<ul><li><strong>AlphaGo, the film.</strong> Google DeepMind&#x27;s own documentary of the Seoul match. Watch the room, not the board.</li><li><strong>Holidays Are Coming, 2025.</strong> Coca-Cola&#x27;s second generative AI Christmas advert, on its own channel. Watch what the animals do with their faces.</li><li><strong>AlphaFold.</strong> Google DeepMind&#x27;s film on the protein structure problem. Watch how carefully they describe what the prediction is not.</li><li><strong>Klarna&#x27;s AI assistant announcement, 2024.</strong> The launch that started the most cited case study in enterprise AI. Watch the confidence.</li></ul>
+<p>Builder note: link out to the original host in every case. Never a re-upload.</p>
+</div></section>
+
+<section id="collection"><div class="wrap">
+  <p class="secnum">04 / The collection</p>
+  <h2>The cases</h2>
+  <p>Two ratings on every case. Evidence describes the best public source. Handover describes how deep the handover went. Plot them together and the shape of the edition appears: the deeper the handover, the thinner the proof, with two exceptions that earned their place.</p>
+
+  <div class="plot"><svg viewBox="0 0 720 372" role="img" aria-label="Scatter plot of the fifteen cases, handover level on the horizontal axis and evidence strength on the vertical axis">
+<line class="g" x1="136" y1="300" x2="704" y2="300"/><line class="g" x1="136" y1="238" x2="704" y2="238"/><line class="g" x1="136" y1="176" x2="704" y2="176"/><line class="g" x1="136" y1="114" x2="704" y2="114"/><line class="g" x1="136" y1="52" x2="704" y2="52"/><text class="ax" x="193" y="348" text-anchor="middle">Augmented</text><text class="ax" x="306" y="348" text-anchor="middle">Assisted</text><text class="ax" x="420" y="348" text-anchor="middle">Delegated</text><text class="ax" x="534" y="348" text-anchor="middle">Automated</text><text class="ax" x="647" y="348" text-anchor="middle">Replaced</text><text class="ax yax" x="124" y="304" text-anchor="end">Archival</text><text class="ax yax" x="124" y="242" text-anchor="end">Reach only</text><text class="ax yax" x="124" y="180" text-anchor="end">Survey</text><text class="ax yax" x="124" y="118" text-anchor="end">Sales trend</text><text class="ax yax" x="124" y="56" text-anchor="end">Modelled effect</text><g class="pt" data-case="case-01"><title>MD Anderson and IBM Watson</title><circle cx="273" cy="300" r="15"/><text x="273" y="304">01</text></g><g class="pt" data-case="case-03"><title>Amazon&#x27;s recruiting tool</title><circle cx="306" cy="300" r="15"/><text x="306" y="304">03</text></g><g class="pt" data-case="case-14"><title>Deloitte Australia</title><circle cx="339" cy="300" r="15"/><text x="339" y="304">14</text></g><g class="pt" data-case="case-02"><title>AlphaGo and Lee Sedol</title><circle cx="512" cy="300" r="15"/><text x="512" y="304">02</text></g><g class="pt" data-case="case-08"><title>Sports Illustrated</title><circle cx="556" cy="300" r="15"/><text x="556" y="304">08</text></g><g class="pt" data-case="case-04"><title>Zillow Offers</title><circle cx="420" cy="114" r="15"/><text x="420" y="118">04</text></g><g class="pt" data-case="case-05"><title>Théâtre D&#x27;opéra Spatial</title><circle cx="171" cy="300" r="15"/><text x="171" y="304">05</text></g><g class="pt" data-case="case-07"><title>The Hollywood strikes</title><circle cx="215" cy="300" r="15"/><text x="215" y="304">07</text></g><g class="pt" data-case="case-06"><title>ChatGPT</title><circle cx="193" cy="238" r="15"/><text x="193" y="242">06</text></g><g class="pt" data-case="case-09"><title>Air Canada</title><circle cx="420" cy="300" r="15"/><text x="420" y="304">09</text></g><g class="pt" data-case="case-10"><title>Klarna</title><circle cx="512" cy="114" r="15"/><text x="512" y="118">10</text></g><g class="pt" data-case="case-15"><title>Taco Bell</title><circle cx="556" cy="114" r="15"/><text x="556" y="118">15</text></g><g class="pt" data-case="case-11"><title>AlphaFold</title><circle cx="534" cy="52" r="15"/><text x="534" y="56">11</text></g><g class="pt" data-case="case-12"><title>Coca-Cola</title><circle cx="420" cy="176" r="15"/><text x="420" y="180">12</text></g><g class="pt" data-case="case-13"><title>Humane AI Pin</title><circle cx="193" cy="114" r="15"/><text x="193" y="118">13</text></g>
+<text class="axttl" x="420" y="368" text-anchor="middle">Handover level, deepest to the right</text>
+</svg></div>
+  <p class="plotnote">Each numbered point is a case. Select one to open it. On a narrow screen the chart scrolls sideways.</p>
+
+  <div class="filters">
+    <div class="fgroup"><span class="flabel">Evidence</span><div class="fbtns"><button class="on" data-k="evidence" data-v="">All</button><button data-k="evidence" data-v="Modelled effect">Modelled effect</button><button data-k="evidence" data-v="Sales trend">Sales trend</button><button data-k="evidence" data-v="Survey">Survey</button><button data-k="evidence" data-v="Reach only">Reach only</button><button data-k="evidence" data-v="Archival">Archival</button></div></div><div class="fgroup"><span class="flabel">Handover</span><div class="fbtns"><button class="on" data-k="handover" data-v="">All</button><button data-k="handover" data-v="Augmented">Augmented</button><button data-k="handover" data-v="Assisted">Assisted</button><button data-k="handover" data-v="Delegated">Delegated</button><button data-k="handover" data-v="Automated">Automated</button><button data-k="handover" data-v="Replaced">Replaced</button></div></div><div class="fgroup"><span class="flabel">Pattern</span><div class="fbtns"><button class="on" data-k="pattern" data-v="">All</button><button data-k="pattern" data-v="The demonstration">The demonstration</button><button data-k="pattern" data-v="The decision">The decision</button><button data-k="pattern" data-v="The voice">The voice</button><button data-k="pattern" data-v="The craft">The craft</button><button data-k="pattern" data-v="The line">The line</button></div></div><div class="fgroup"><span class="flabel">Place</span><div class="fbtns"><button class="on" data-k="place" data-v="">All</button><button data-k="place" data-v="Australia">Australia</button><button data-k="place" data-v="Canada">Canada</button><button data-k="place" data-v="Global">Global</button><button data-k="place" data-v="South Korea">South Korea</button><button data-k="place" data-v="Sweden">Sweden</button><button data-k="place" data-v="United Kingdom">United Kingdom</button><button data-k="place" data-v="United States">United States</button></div></div><div class="fgroup"><span class="flabel">Sector</span><div class="fbtns"><button class="on" data-k="sector" data-v="">All</button><button data-k="sector" data-v="Advertising">Advertising</button><button data-k="sector" data-v="Art">Art</button><button data-k="sector" data-v="Aviation">Aviation</button><button data-k="sector" data-v="Consumer hardware">Consumer hardware</button><button data-k="sector" data-v="Entertainment">Entertainment</button><button data-k="sector" data-v="Financial services">Financial services</button><button data-k="sector" data-v="Food service">Food service</button><button data-k="sector" data-v="Healthcare">Healthcare</button><button data-k="sector" data-v="Media">Media</button><button data-k="sector" data-v="Professional services">Professional services</button><button data-k="sector" data-v="Property">Property</button><button data-k="sector" data-v="Recruitment">Recruitment</button><button data-k="sector" data-v="Research">Research</button><button data-k="sector" data-v="Science">Science</button><button data-k="sector" data-v="Technology">Technology</button></div></div>
+    <input id="q" type="search" placeholder="Search the cases" aria-label="Search the cases">
+  </div>
+  <p class="count" id="count">15 cases</p>
+  <div id="cases">
+  
+<article class="case" id="case-01"
+  data-evidence="Archival" data-handover="Assisted"
+  data-pattern="The decision" data-place="United States"
+  data-sector="Healthcare" data-status="Fixed"
+  data-search="md anderson and ibm watson oncology expert advisor usd 62.1 million, spent between june 2012 and october 2016. healthcare united states">
+  <button class="case-head" aria-expanded="false">
+    <span class="num">01</span>
+    <span class="case-id">
+      <span class="subject">MD Anderson and IBM Watson</span>
+      <span class="years">2012 to 2016 &middot; The decision</span>
+      <span class="subtitle">Oncology Expert Advisor</span>
+    </span>
+    <span class="rates">
+      <span class="pill ev ev-0">Archival</span>
+      <span class="pill hv hv-1">Assisted</span>
+      
+    </span>
+    <span class="chev" aria-hidden="true"></span>
+  </button>
+  <div class="case-body">
+    <p class="headline"><span>Headline fact</span>USD 62.1 million, spent between June 2012 and October 2016.</p>
+    <div class="fld "><h4>What was handed over</h4><p>MD Anderson Cancer Center set out to encode the judgement of its senior oncologists into a decision support tool built on IBM Watson, so that community oncologists elsewhere could treat to the same standard. The original contract was USD 2.4 million for six months. It was extended twelve times.</p></div>
+    <div class="fld "><h4>The lesson</h4><p>A system that cannot read the records your clinicians actually use is not a decision support tool. It is a demonstration with a budget.</p></div>
+    <div class="fld take"><h4>My take</h4><p>The audit is not about whether Watson was clever. It is about procurement, oversight and a project that never met a patient. That is the part everyone forgets when they cite this one.</p></div>
+    <div class="fld "><h4>The starting point</h4><p>Cancer care varies enormously by where you happen to live. Encoding specialist judgement and distributing it was a genuinely worthwhile problem, which is why the ambition attracted the coverage it did.</p></div>
+    <div class="fld "><h4>What changed</h4><p>Nothing clinical. The University of Texas System audit found the tool had not been integrated with MD Anderson&#x27;s current electronic records system, having been piloted on the previous one. IBM&#x27;s own contractual language stated the Oncology Expert Advisor was not ready for human investigational or clinical use, and that its use in treating patients was prohibited.</p></div>
+    <div class="fld "><h4>What stayed human</h4><p>Every treatment decision. No patient was treated using the system.</p></div>
+    <div class="fld "><h4>What the number can and cannot show</h4><p>USD 62.1 million is a documented spend, split roughly USD 39.2 million to IBM and USD 23 million to PricewaterhouseCoopers. It is a cost, not an outcome. The audit examined how the money was spent and took no position on whether the underlying technology worked.</p></div>
+    <div class="fld "><h4>How to measure a similar handover</h4><p>Before any spend, agree the clinical records integration as a gate rather than a phase. Measure concordance against a specialist panel on live records, and publish the rate at which clinicians accept or override the recommendation.</p></div>
+    
+    
+    <div class="fld src"><h4>Sources</h4><p>University of Texas System Administration, Special Review of Procurement Procedures Related to the MD Anderson Cancer Center Oncology Expert Advisor Project, February 2017. Contemporary reporting in the Houston Chronicle.</p></div>
+    <div class="fld note"><h4>Media note for builder</h4><p>The audit document itself is the image. Public record, University of Texas System. Do not use stock photography of hospitals or scientists.</p></div>
+  </div>
+</article>
+<article class="case" id="case-02"
+  data-evidence="Archival" data-handover="Automated"
+  data-pattern="The demonstration" data-place="South Korea"
+  data-sector="Research" data-status="Fixed"
+  data-search="alphago and lee sedol move 37 4 games to 1, seoul, march 2016. research south korea">
+  <button class="case-head" aria-expanded="false">
+    <span class="num">02</span>
+    <span class="case-id">
+      <span class="subject">AlphaGo and Lee Sedol</span>
+      <span class="years">2016 &middot; The demonstration</span>
+      <span class="subtitle">Move 37</span>
+    </span>
+    <span class="rates">
+      <span class="pill ev ev-0">Archival</span>
+      <span class="pill hv hv-3">Automated</span>
+      
+    </span>
+    <span class="chev" aria-hidden="true"></span>
+  </button>
+  <div class="case-body">
+    <p class="headline"><span>Headline fact</span>4 games to 1, Seoul, March 2016.</p>
+    <div class="fld "><h4>What was handed over</h4><p>Move selection, entirely. For the duration of each game, no human chose a move on the machine&#x27;s behalf. A DeepMind engineer placed the stones.</p></div>
+    <div class="fld "><h4>The lesson</h4><p>A narrow task, completely handed over, under rules that never change, is where machines are strongest. Almost no business problem looks like this.</p></div>
+    <div class="fld take"><h4>My take</h4><p>Everyone quotes move 37 as proof that machines are creative. The more useful detail is game four, when Lee Sedol found move 78 and the machine fell apart. Both halves belong in the story.</p></div>
+    <div class="fld "><h4>The starting point</h4><p>Go had been the standing example of a game too intuitive to brute force. Chess had fallen in 1997. Go was expected to hold for another decade.</p></div>
+    <div class="fld "><h4>What changed</h4><p>The assumption that intuition was a human reserve. The match was watched by a reported audience in the hundreds of millions across Asia, and it changed what boards were willing to believe was possible.</p></div>
+    <div class="fld "><h4>What stayed human</h4><p>The framing. Somebody chose Go, chose the opponent, chose the venue and chose to make it public. The demonstration was a communications decision as much as a technical one.</p></div>
+    <div class="fld "><h4>What the number can and cannot show</h4><p>The match record is complete and uncontested. It proves what happened across five games of Go in March 2016. It says nothing about any commercial task, and the archive carries no business outcome attached to it.</p></div>
+    <div class="fld "><h4>How to measure a similar handover</h4><p>Treat a demonstration as a demonstration. Before drawing an operational conclusion, ask whether your task has fixed rules, complete information, an unambiguous win condition and unlimited practice. If any answer is no, the demonstration does not transfer.</p></div>
+    
+    
+    <div class="fld src"><h4>Sources</h4><p>Google DeepMind match records and the AlphaGo documentary. Contemporary coverage of the Seoul match, March 2016.</p></div>
+    <div class="fld note"><h4>Media note for builder</h4><p>Official DeepMind match imagery or a still from the documentary, credited to Google DeepMind. Verify licence before use. If no free image is available, report NOT FOUND.</p></div>
+  </div>
+</article>
+<article class="case" id="case-03"
+  data-evidence="Archival" data-handover="Assisted"
+  data-pattern="The decision" data-place="United States"
+  data-sector="Recruitment" data-status="Fixed"
+  data-search="amazon&#x27;s recruiting tool the screener that learned the past scrapped. reported by reuters in october 2018. recruitment united states">
+  <button class="case-head" aria-expanded="false">
+    <span class="num">03</span>
+    <span class="case-id">
+      <span class="subject">Amazon&#x27;s recruiting tool</span>
+      <span class="years">2014 to 2018 &middot; The decision</span>
+      <span class="subtitle">The screener that learned the past</span>
+    </span>
+    <span class="rates">
+      <span class="pill ev ev-0">Archival</span>
+      <span class="pill hv hv-1">Assisted</span>
+      
+    </span>
+    <span class="chev" aria-hidden="true"></span>
+  </button>
+  <div class="case-body">
+    <p class="headline"><span>Headline fact</span>Scrapped. Reported by Reuters in October 2018.</p>
+    <div class="fld "><h4>What was handed over</h4><p>Candidate ranking. The system scored applicants so that recruiters could work from a shortlist.</p></div>
+    <div class="fld "><h4>The lesson</h4><p>A model trained on a decade of your own hiring will reproduce a decade of your own hiring, including the parts you would not defend out loud.</p></div>
+    <div class="fld take"><h4>My take</h4><p>This case gets cited as a story about bias in AI. It is more precisely a story about bias in the training data, which is to say a story about the company. The machine was accurate about the past. That was the problem.</p></div>
+    <div class="fld "><h4>The starting point</h4><p>High volume technical recruiting is expensive and slow, and screening is the most repetitive part of it. The case for automating it was obvious.</p></div>
+    <div class="fld "><h4>What changed</h4><p>According to Reuters, the system penalised CVs containing certain terms associated with women, and Amazon&#x27;s recruiters were told not to rely on the rankings. The project was abandoned.</p></div>
+    <div class="fld "><h4>What stayed human</h4><p>The hiring decisions. The tool produced rankings, not offers.</p></div>
+    <div class="fld "><h4>What the number can and cannot show</h4><p>There is no number here, and that matters. The account rests on a Reuters investigation drawing on people familiar with the project. Amazon has not published a technical account of the system, its performance or its scope. The archive rates the record, not the reporting.</p></div>
+    <div class="fld "><h4>How to measure a similar handover</h4><p>Audit the training set before the model. Measure outcome rates by group at every stage from screen to offer, run the model shadow against human decisions before it touches a candidate, and publish the override rate.</p></div>
+    
+    
+    <div class="fld src"><h4>Sources</h4><p>Jeffrey Dastin, Reuters, October 2018.</p></div>
+    <div class="fld note"><h4>Media note for builder</h4><p>No authentic image exists. Do not generate one, do not use a lookalike, do not use stock photography of an office. Report NOT FOUND and leave the slot empty. The absence is on theme.</p></div>
+  </div>
+</article>
+<article class="case" id="case-04"
+  data-evidence="Sales trend" data-handover="Delegated"
+  data-pattern="The decision" data-place="United States"
+  data-sector="Property" data-status="Fixed"
+  data-search="zillow offers the pricing model that bought the houses a usd 304.4 million inventory write-down in the third quarter of 2021, and approximately a 25 per cent reduction in the company&#x27;s workforce. property united states">
+  <button class="case-head" aria-expanded="false">
+    <span class="num">04</span>
+    <span class="case-id">
+      <span class="subject">Zillow Offers</span>
+      <span class="years">2021 &middot; The decision</span>
+      <span class="subtitle">The pricing model that bought the houses</span>
+    </span>
+    <span class="rates">
+      <span class="pill ev ev-3">Sales trend</span>
+      <span class="pill hv hv-2">Delegated</span>
+      
+    </span>
+    <span class="chev" aria-hidden="true"></span>
+  </button>
+  <div class="case-body">
+    <p class="headline"><span>Headline fact</span>A USD 304.4 million inventory write-down in the third quarter of 2021, and approximately a 25 per cent reduction in the company&#x27;s workforce.</p>
+    <div class="fld "><h4>What was handed over</h4><p>Price setting at scale. Zillow bought homes against its own model&#x27;s estimate of what they would later sell for.</p></div>
+    <div class="fld "><h4>The lesson</h4><p>When a model&#x27;s output is a purchase rather than a recommendation, the error does not stay a prediction. It becomes inventory.</p></div>
+    <div class="fld take"><h4>My take</h4><p>The most interesting line in the filing is the word unintentionally. Zillow bought homes at prices higher than its own later estimate of what it could sell them for, and it did so at volume before anyone caught it.</p></div>
+    <div class="fld "><h4>The starting point</h4><p>Selling a house is slow, uncertain and unpleasant. An instant cash offer is a genuinely good product if the pricing holds.</p></div>
+    <div class="fld "><h4>What changed</h4><p>On 2 November 2021 the board determined to wind down Zillow Offers, citing home pricing unpredictability, capacity constraints and other operational challenges. The company ended the quarter holding 9,790 homes with a further 8,172 under contract. The full year inventory write-down was later recorded at USD 407.9 million.</p></div>
+    <div class="fld "><h4>What stayed human</h4><p>The decision to stop. It took a board, not a model, to recognise that the losses were structural.</p></div>
+    <div class="fld "><h4>What the number can and cannot show</h4><p>These figures are from Zillow&#x27;s own SEC filings, which is why this case rates higher than most in the edition. They show the financial consequence precisely. They do not isolate how much of the loss belonged to the model, how much to an extraordinary housing market, and how much to capacity constraints in renovation and resale. Zillow&#x27;s own statement names all three.</p></div>
+    <div class="fld "><h4>How to measure a similar handover</h4><p>Run the model against a held-out set of transactions before it buys anything. Cap exposure per period. Track realised margin against predicted margin weekly, and set a predefined loss threshold that halts purchasing automatically.</p></div>
+    
+    
+    <div class="fld src"><h4>Sources</h4><p>Zillow Group Form 8-K and Form 10-Q, filed November 2021. Zillow Group Form 10-K for the year ended 31 December 2021.</p></div>
+    <div class="fld note"><h4>Media note for builder</h4><p>The filing is the image. Public record, SEC EDGAR. Alternatively Zillow&#x27;s own press imagery with licence confirmed.</p></div>
+  </div>
+</article>
+<article class="case" id="case-05"
+  data-evidence="Archival" data-handover="Augmented"
+  data-pattern="The demonstration" data-place="United States"
+  data-sector="Art" data-status="Fixed"
+  data-search="théâtre d&#x27;opéra spatial the prize that started the argument first place, digital arts category, colorado state fair, august 2022. art united states">
+  <button class="case-head" aria-expanded="false">
+    <span class="num">05</span>
+    <span class="case-id">
+      <span class="subject">Théâtre D&#x27;opéra Spatial</span>
+      <span class="years">2022 &middot; The demonstration</span>
+      <span class="subtitle">The prize that started the argument</span>
+    </span>
+    <span class="rates">
+      <span class="pill ev ev-0">Archival</span>
+      <span class="pill hv hv-0">Augmented</span>
+      
+    </span>
+    <span class="chev" aria-hidden="true"></span>
+  </button>
+  <div class="case-body">
+    <p class="headline"><span>Headline fact</span>First place, digital arts category, Colorado State Fair, August 2022.</p>
+    <div class="fld "><h4>What was handed over</h4><p>Image generation. The entrant used Midjourney, then selected, refined and printed the result, and entered it under a category for art created with digital technology.</p></div>
+    <div class="fld "><h4>The lesson</h4><p>The argument that followed was never really about the prize. It was about who gets called the author, and nobody had agreed an answer before the entry form was filled in.</p></div>
+    <div class="fld take"><h4>My take</h4><p>A county fair set the terms of a global argument about authorship, and it did it before any court or regulator had a view. That is usually how these things start.</p></div>
+    <div class="fld "><h4>The starting point</h4><p>Generative image tools had become usable by non-specialists within months. The institutions that award, license and credit creative work had rules written for a different technology.</p></div>
+    <div class="fld "><h4>What changed</h4><p>The question stopped being theoretical. Within a year, disclosure of AI involvement had become a live issue for competitions, publishers, stock libraries and copyright offices.</p></div>
+    <div class="fld "><h4>What stayed human</h4><p>Selection, iteration, finishing and the decision to enter. The entrant has consistently described a process of many iterations rather than a single prompt.</p></div>
+    <div class="fld "><h4>What the number can and cannot show</h4><p>A prize is a judgement by a panel under a particular set of rules on a particular day. It is not evidence about the quality of generated images in general, and it tells you nothing about commercial effect.</p></div>
+    <div class="fld "><h4>How to measure a similar handover</h4><p>If you commission creative work, write the disclosure rule before the brief goes out, not after the work comes back. Define what must be declared, by whom, and what happens if it is not.</p></div>
+    
+    
+    <div class="fld src"><h4>Sources</h4><p>Colorado State Fair Fine Arts competition records, 2022. Contemporary reporting.</p></div>
+    <div class="fld note"><h4>Media note for builder</h4><p>The artwork is the entrant&#x27;s copyright and is itself the subject of a contested authorship claim. Do not reproduce it. Use the competition&#x27;s own published results listing as the image, or report NOT FOUND.</p></div>
+  </div>
+</article>
+<article class="case" id="case-06"
+  data-evidence="Reach only" data-handover="Augmented"
+  data-pattern="The demonstration" data-place="United States"
+  data-sector="Technology" data-status="Fixed"
+  data-search="chatgpt the thing everyone tried a reported 100 million monthly users within two months of launch, on 30 november 2022. technology united states">
+  <button class="case-head" aria-expanded="false">
+    <span class="num">06</span>
+    <span class="case-id">
+      <span class="subject">ChatGPT</span>
+      <span class="years">2022 &middot; The demonstration</span>
+      <span class="subtitle">The thing everyone tried</span>
+    </span>
+    <span class="rates">
+      <span class="pill ev ev-1">Reach only</span>
+      <span class="pill hv hv-0">Augmented</span>
+      
+    </span>
+    <span class="chev" aria-hidden="true"></span>
+  </button>
+  <div class="case-body">
+    <p class="headline"><span>Headline fact</span>A reported 100 million monthly users within two months of launch, on 30 November 2022.</p>
+    <div class="fld "><h4>What was handed over</h4><p>Nothing, at first. A research preview with a text box. Every subsequent case in this archive is dated from it.</p></div>
+    <div class="fld "><h4>The lesson</h4><p>Adoption is not deployment. The speed at which people tried it says nothing about what any organisation later managed to hand over successfully.</p></div>
+    <div class="fld take"><h4>My take</h4><p>This is the most cited number in the field and one of the least useful. It counts curiosity. Every genuine question about value sits in the fourteen cases around it.</p></div>
+    <div class="fld "><h4>The starting point</h4><p>Large language models had existed for years and were largely confined to developers and researchers. The interface, not the model, was the change.</p></div>
+    <div class="fld "><h4>What changed</h4><p>The conversation moved from research to boardroom inside a quarter. Budgets, job descriptions and product roadmaps followed.</p></div>
+    <div class="fld "><h4>What stayed human</h4><p>Everything. At launch there was no action it could take, no system it was connected to and no decision it could make on anyone&#x27;s behalf.</p></div>
+    <div class="fld "><h4>What the number can and cannot show</h4><p>The 100 million figure is a widely circulated third-party estimate rather than a company disclosure, and user counts of this kind measure reach and nothing else. It is not revenue, retention, task completion or value. It belongs on the bottom rung of the ladder and the builder should present it as such.</p></div>
+    <div class="fld "><h4>How to measure a similar handover</h4><p>For any new tool, stop counting logins. Measure task completion, time saved against a baseline, error and rework rates, and the proportion of output that survives review unchanged.</p></div>
+    
+    
+    <div class="fld src"><h4>Sources</h4><p>OpenAI launch announcement, 30 November 2022. Widely reported third-party user estimates, February 2023.</p></div>
+    <div class="fld note"><h4>Media note for builder</h4><p>OpenAI&#x27;s own launch page or product interface screenshot. Credit and date it. Verify licence.</p></div>
+  </div>
+</article>
+<article class="case" id="case-07"
+  data-evidence="Archival" data-handover="Augmented"
+  data-pattern="The line" data-place="United States"
+  data-sector="Entertainment" data-status="Fixed"
+  data-search="the hollywood strikes what the machine does not get ai terms written into the writers guild and sag-aftra agreements, 2023. entertainment united states">
+  <button class="case-head" aria-expanded="false">
+    <span class="num">07</span>
+    <span class="case-id">
+      <span class="subject">The Hollywood strikes</span>
+      <span class="years">2023 &middot; The line</span>
+      <span class="subtitle">What the machine does not get</span>
+    </span>
+    <span class="rates">
+      <span class="pill ev ev-0">Archival</span>
+      <span class="pill hv hv-0">Augmented</span>
+      
+    </span>
+    <span class="chev" aria-hidden="true"></span>
+  </button>
+  <div class="case-body">
+    <p class="headline"><span>Headline fact</span>AI terms written into the Writers Guild and SAG-AFTRA agreements, 2023.</p>
+    <div class="fld "><h4>What was handed over</h4><p>By negotiation, very little. The agreements set out where generative AI may be used in writing and performance, what must be disclosed, and what consent and compensation apply to digital replicas.</p></div>
+    <div class="fld "><h4>The lesson</h4><p>This is the only case in the edition where a limit was agreed in advance rather than discovered afterwards. Every other case here found its boundary by crossing it.</p></div>
+    <div class="fld take"><h4>My take</h4><p>Two unions did in one year what regulators have not managed since. Whatever you think of the outcome, the mechanism is the interesting part: the people doing the work set the terms before the technology arrived at scale.</p></div>
+    <div class="fld "><h4>The starting point</h4><p>Generative tools reached usable quality in writing and image generation at the same moment both contracts came up for renewal. The timing was not planned by anyone.</p></div>
+    <div class="fld "><h4>What changed</h4><p>AI moved from a technical question to a contractual one. The agreements became the reference point for other industries thinking about disclosure and consent.</p></div>
+    <div class="fld "><h4>What stayed human</h4><p>Authorship and likeness, by written agreement, with specified conditions.</p></div>
+    <div class="fld "><h4>What the number can and cannot show</h4><p>The agreements are public and their terms are exact. What they cannot show is effect. There is no published measure of how production economics, employment or output have changed as a result, and the archive should not imply one.</p></div>
+    <div class="fld "><h4>How to measure a similar handover</h4><p>Write the limit before the capability arrives. Specify what must be disclosed, who consents, what is compensated and what is prohibited outright, and review it on a fixed schedule rather than after an incident.</p></div>
+    
+    
+    <div class="fld src"><h4>Sources</h4><p>Writers Guild of America Minimum Basic Agreement, 2023. SAG-AFTRA Television/Theatrical Agreement, 2023.</p></div>
+    <div class="fld note"><h4>Media note for builder</h4><p>The agreements themselves are the image. Picket line photography is overwhelmingly wire agency material and is not free to use. Do not use it unless a licence is confirmed in writing.</p></div>
+  </div>
+</article>
+<article class="case" id="case-08"
+  data-evidence="Archival" data-handover="Automated"
+  data-pattern="The craft" data-place="United States"
+  data-sector="Media" data-status="Fixed"
+  data-search="sports illustrated the writers who did not exist the author profiles were removed from the site after futurism approached the publisher, in november 2023. media united states">
+  <button class="case-head" aria-expanded="false">
+    <span class="num">08</span>
+    <span class="case-id">
+      <span class="subject">Sports Illustrated</span>
+      <span class="years">2023 &middot; The craft</span>
+      <span class="subtitle">The writers who did not exist</span>
+    </span>
+    <span class="rates">
+      <span class="pill ev ev-0">Archival</span>
+      <span class="pill hv hv-3">Automated</span>
+      
+    </span>
+    <span class="chev" aria-hidden="true"></span>
+  </button>
+  <div class="case-body">
+    <p class="headline"><span>Headline fact</span>The author profiles were removed from the site after Futurism approached the publisher, in November 2023.</p>
+    <div class="fld "><h4>What was handed over</h4><p>Product review content, supplied by a third party, published under bylines belonging to people who could not be found, with portraits traced to a marketplace selling AI-generated headshots.</p></div>
+    <div class="fld "><h4>The lesson</h4><p>The reputational damage attached to the fake person, not to the use of a tool. Nobody minded the software. They minded being told a human wrote it.</p></div>
+    <div class="fld take"><h4>My take</h4><p>Be precise about what was proved here. The invented authors and the generated headshots are documented. Whether the articles themselves were machine-written was denied by the publisher and never established.</p></div>
+    <div class="fld "><h4>The starting point</h4><p>A magazine with one of the strongest mastheads in American publishing, under an owner pursuing commerce revenue at volume.</p></div>
+    <div class="fld "><h4>What changed</h4><p>The Arena Group said the content came from a third party, AdVon Commerce, which had assured it the articles were written by humans using pen names, and ended that partnership. The chief executive was later terminated. The company subsequently repositioned itself as an AI business.</p></div>
+    <div class="fld "><h4>What stayed human</h4><p>The reporting. A journalist asking who the authors were is what surfaced the whole thing.</p></div>
+    <div class="fld "><h4>What the number can and cannot show</h4><p>There is no outcome figure. What exists is a documented investigation, a company statement disputing part of it, and a sequence of departures. The archive rates that record as archival, and the disputed element is marked rather than resolved.</p></div>
+    <div class="fld "><h4>How to measure a similar handover</h4><p>Make authorship a contractual warranty with your suppliers, not an assumption. Audit bylines against real people. Publish a disclosure standard and apply it to licensed content as well as your own.</p></div>
+    
+    
+    <div class="fld src"><h4>Sources</h4><p>Maggie Harrison Dupre, Futurism, 27 November 2023. The Arena Group public statement, 28 November 2023. Contemporary reporting on subsequent executive changes.</p></div>
+    <div class="fld note"><h4>Media note for builder</h4><p>Do not reproduce the AI-generated headshots. Do not reproduce Sports Illustrated covers or mastheads. Use The Arena Group&#x27;s own published statement as the image, or report NOT FOUND.</p></div>
+  </div>
+</article>
+<article class="case" id="case-09"
+  data-evidence="Archival" data-handover="Delegated"
+  data-pattern="The voice" data-place="Canada"
+  data-sector="Aviation" data-status="Fixed"
+  data-search="air canada moffatt v air canada cad 812.02, ordered 14 february 2024. aviation canada">
+  <button class="case-head" aria-expanded="false">
+    <span class="num">09</span>
+    <span class="case-id">
+      <span class="subject">Air Canada</span>
+      <span class="years">2024 &middot; The voice</span>
+      <span class="subtitle">Moffatt v Air Canada</span>
+    </span>
+    <span class="rates">
+      <span class="pill ev ev-0">Archival</span>
+      <span class="pill hv hv-2">Delegated</span>
+      
+    </span>
+    <span class="chev" aria-hidden="true"></span>
+  </button>
+  <div class="case-body">
+    <p class="headline"><span>Headline fact</span>CAD 812.02, ordered 14 February 2024.</p>
+    <div class="fld "><h4>What was handed over</h4><p>Answering customer questions about fare policy. The airline&#x27;s website chatbot told a passenger he could buy a full fare ticket and apply for the bereavement rate retroactively within ninety days. The airline&#x27;s actual policy, on a page the chatbot linked to, said the opposite.</p></div>
+    <div class="fld "><h4>The lesson</h4><p>If it speaks on your website, it speaks for you. The tribunal rejected the suggestion that the chatbot was a separate legal entity responsible for its own actions.</p></div>
+    <div class="fld take"><h4>My take</h4><p>The sum is trivial and the reasoning is not. Air Canada argued its own chatbot was somebody else. The tribunal member called that a remarkable submission, and the question of who owns a machine&#x27;s promises has been settled that way ever since.</p></div>
+    <div class="fld "><h4>The starting point</h4><p>A passenger booking travel after a family death, trying to understand a policy that exists precisely for that situation.</p></div>
+    <div class="fld "><h4>What changed</h4><p>The tribunal found negligent misrepresentation, holding that Air Canada did not take reasonable care to ensure its chatbot was accurate. The award was CAD 650.88 in damages, CAD 36.14 in pre-judgment interest and CAD 125 in tribunal fees.</p></div>
+    <div class="fld "><h4>What stayed human</h4><p>The adjudication. A tribunal member read both pages and decided which one the customer was entitled to rely on.</p></div>
+    <div class="fld "><h4>What the number can and cannot show</h4><p>The ruling is exact, published and citable, which is why this rates as a documented record rather than a claim. Two limits matter. The British Columbia Civil Resolution Tribunal is a small claims body with a monetary limit, so this is persuasive reasoning rather than binding precedent. And Air Canada&#x27;s own spokesperson indicated the chatbot was not a generative system, so this is a case about liability for automated statements, not about generative AI specifically.</p></div>
+    <div class="fld "><h4>How to measure a similar handover</h4><p>Treat every customer-facing statement the system can make as published policy. Test it against the policy pages weekly, log every answer, and give the customer a visible route to a human.</p></div>
+    
+    
+    <div class="fld src"><h4>Sources</h4><p>Moffatt v. Air Canada, 2024 BCCRT 149, British Columbia Civil Resolution Tribunal, 14 February 2024, member Christopher C. Rivers.</p></div>
+    <div class="fld note"><h4>Media note for builder</h4><p>The decision is the image. Public record, CanLII. Do not use stock photography of aircraft or call centres.</p></div>
+  </div>
+</article>
+<article class="case" id="case-10"
+  data-evidence="Sales trend" data-handover="Automated"
+  data-pattern="The voice" data-place="Sweden"
+  data-sector="Financial services" data-status="LIVE"
+  data-search="klarna the work of 700 agents klarna reported its ai assistant handled two-thirds of service chats in its first month, equivalent to the work of 700 full-time agents. financial services sweden">
+  <button class="case-head" aria-expanded="false">
+    <span class="num">10</span>
+    <span class="case-id">
+      <span class="subject">Klarna</span>
+      <span class="years">2024 to 2026 &middot; The voice</span>
+      <span class="subtitle">The work of 700 agents</span>
+    </span>
+    <span class="rates">
+      <span class="pill ev ev-3">Sales trend</span>
+      <span class="pill hv hv-3">Automated</span>
+      <span class="pill live">Live</span>
+    </span>
+    <span class="chev" aria-hidden="true"></span>
+  </button>
+  <div class="case-body">
+    <p class="headline"><span>Headline fact</span>Klarna reported its AI assistant handled two-thirds of service chats in its first month, equivalent to the work of 700 full-time agents.</p>
+    <div class="fld "><h4>What was handed over</h4><p>Front-line customer service, at volume, with the escalation path to a human narrowed to the point where it stopped functioning as one.</p></div>
+    <div class="fld "><h4>The lesson</h4><p>The average held while the thing that mattered broke. Routine volume was large enough to hide deterioration on the cases where the customer was in distress.</p></div>
+    <div class="fld take"><h4>My take</h4><p>This is the most cited enterprise AI case study there is, and for once the citation is deserved, because it is one of the very few with a complete public arc: a confident launch, specific numbers, and a reversal the chief executive stated himself.</p></div>
+    <div class="fld "><h4>The starting point</h4><p>A high-volume consumer finance business with heavy, expensive and largely outsourced customer service.</p></div>
+    <div class="fld "><h4>What changed</h4><p>By November 2025 Klarna put the figure at 853 agents and USD 60 million saved. The company then moved back towards a hybrid model, rebuilding human capacity and repositioning access to a person as the premium service. A Forrester analyst told CX Dive the company had overpivoted to cost containment and described it as almost the poster child for bad AI deployment.</p></div>
+    <div class="fld "><h4>What stayed human</h4><p>In the end, the cases that decide whether a customer stays: disputes, complex refunds and financial hardship.</p></div>
+    <div class="fld "><h4>What the number can and cannot show</h4><p>Every figure here is company-reported and the agent-equivalent number describes workload absorbed, not 700 people made redundant. The reduction in overall headcount came through attrition and a hiring freeze across the business, not a customer service redundancy programme. No independent audit of the savings, the satisfaction decline or the cost of rebuilding has been published.</p></div>
+    <div class="fld "><h4>How to measure a similar handover</h4><p>Stop reporting average satisfaction. Segment by case type and track the hard cases separately. Measure the escalation rate, the time to reach a human, and resolution on disputes and hardship cases. Model the cost of reversing the decision before you make it.</p></div>
+    <div class="fld "><h4>Live note</h4><p>Review at least twice a year. The relevant questions are whether the hybrid model has stabilised, whether any independent figures have been published, and whether the savings claim has been restated.</p></div>
+    
+    <div class="fld src"><h4>Sources</h4><p>Klarna company statements, 2024 and 2025. CX Dive reporting, including the November 2025 figures and the Forrester comment. Contemporary reporting on the reversal.</p></div>
+    <div class="fld note"><h4>Media note for builder</h4><p>Klarna&#x27;s own press imagery or a credited still from a recorded interview with the chief executive. Verify licence.</p></div>
+  </div>
+</article>
+<article class="case" id="case-11"
+  data-evidence="Modelled effect" data-handover="Automated"
+  data-pattern="The line" data-place="United Kingdom"
+  data-sector="Science" data-status="Fixed"
+  data-search="alphafold the structures predicted structures for virtually all of the roughly 200 million proteins researchers have identified. the nobel prize in chemistry 2024 was awarded one half to david baker for computational protein design, and the other half jointly to demis hassabis and john jumper for protein structure prediction. science united kingdom">
+  <button class="case-head" aria-expanded="false">
+    <span class="num">11</span>
+    <span class="case-id">
+      <span class="subject">AlphaFold</span>
+      <span class="years">2020 to 2024 &middot; The line</span>
+      <span class="subtitle">The structures</span>
+    </span>
+    <span class="rates">
+      <span class="pill ev ev-4">Modelled</span>
+      <span class="pill hv hv-3">Automated</span>
+      
+    </span>
+    <span class="chev" aria-hidden="true"></span>
+  </button>
+  <div class="case-body">
+    <p class="headline"><span>Headline fact</span>Predicted structures for virtually all of the roughly 200 million proteins researchers have identified. The Nobel Prize in Chemistry 2024 was awarded one half to David Baker for computational protein design, and the other half jointly to Demis Hassabis and John Jumper for protein structure prediction.</p>
+    <div class="fld "><h4>What was handed over</h4><p>Structure prediction from amino acid sequence, end to end. A problem that had stood for about fifty years.</p></div>
+    <div class="fld "><h4>The lesson</h4><p>This is what a handover looks like when the output can be checked against reality. The predictions were measurable against experimentally determined structures, so the claim could be tested rather than asserted.</p></div>
+    <div class="fld take"><h4>My take</h4><p>The only case in this edition that can prove itself, and note what made that possible: an open database, a public benchmark, and a field that had spent decades building the ground truth to test against. The proof was not a marketing decision.</p></div>
+    <div class="fld "><h4>The starting point</h4><p>Determining a protein structure experimentally took enormous time and cost. Over about sixty years, biologists had determined the structures of roughly 190,000 proteins.</p></div>
+    <div class="fld "><h4>What changed</h4><p>EMBL partnered with Google DeepMind to make the predictions freely available through the AlphaFold Protein Structure Database. The database launched in 2021 with just over 360,000 structures and grew to around 200 million, covering over one million organisms. The Nobel citation records use by more than two million people across 190 countries.</p></div>
+    <div class="fld "><h4>What stayed human</h4><p>Experimental validation, and the decades of curated open data the system was trained on. The Nobel laureate who led the work has said publicly that public data were essential to its development.</p></div>
+    <div class="fld "><h4>What the number can and cannot show</h4><p>A prediction is a prediction. The database publishes a per-residue confidence score for exactly this reason, and a low-confidence region is not a solved structure. The count of 200 million describes coverage, not accuracy, and accuracy varies. What the archive rates highly is not the size of the number but the existence of an independent benchmark against which the claim could fail.</p></div>
+    <div class="fld "><h4>How to measure a similar handover</h4><p>Find or build the ground truth before you build the system. Publish the confidence score alongside every output, and make the failure modes as visible as the successes.</p></div>
+    
+    
+    <div class="fld src"><h4>Sources</h4><p>The Royal Swedish Academy of Sciences, Nobel Prize in Chemistry 2024 press release, 9 October 2024. EMBL-EBI and Google DeepMind, AlphaFold Protein Structure Database.</p></div>
+    <div class="fld note"><h4>Media note for builder</h4><p>EMBL-EBI publishes AlphaFold structure imagery with clear credit lines, for example Karen Arnott, EMBL-EBI. Confirm the licence and reproduce the credit exactly.</p></div>
+  </div>
+</article>
+<article class="case" id="case-12"
+  data-evidence="Survey" data-handover="Delegated"
+  data-pattern="The craft" data-place="Global"
+  data-sector="Advertising" data-status="Fixed"
+  data-search="coca-cola holidays are coming, again in system1 audience testing, the 2025 advert scored a maximum 5.9-star rating and 97 per cent on distinctiveness. advertising global">
+  <button class="case-head" aria-expanded="false">
+    <span class="num">12</span>
+    <span class="case-id">
+      <span class="subject">Coca-Cola</span>
+      <span class="years">2024 and 2025 &middot; The craft</span>
+      <span class="subtitle">Holidays Are Coming, again</span>
+    </span>
+    <span class="rates">
+      <span class="pill ev ev-2">Survey</span>
+      <span class="pill hv hv-2">Delegated</span>
+      
+    </span>
+    <span class="chev" aria-hidden="true"></span>
+  </button>
+  <div class="case-body">
+    <p class="headline"><span>Headline fact</span>In System1 audience testing, the 2025 advert scored a maximum 5.9-star rating and 97 per cent on distinctiveness.</p>
+    <div class="fld "><h4>What was handed over</h4><p>Production of the brand&#x27;s most recognisable annual advertising. The 2024 campaign was made with three AI studios. The 2025 campaign returned to the approach with animals rather than people, which sidestepped the uncanny valley problem of the first attempt.</p></div>
+    <div class="fld "><h4>The lesson</h4><p>The audience that shouts and the audience that is measured are not the same audience, and in this case they disagreed completely.</p></div>
+    <div class="fld take"><h4>My take</h4><p>This is the most instructive case in the edition, because it contains two credible numbers pointing in opposite directions. A social media backlash in the millions of impressions, and a formal audience test scoring the work at the top of the scale. Pick whichever one suits your argument and you have learned nothing.</p></div>
+    <div class="fld "><h4>The starting point</h4><p>An advert first broadcast in 1995 with enormous accumulated affection, and a production process the chief marketing officer described as previously starting a year in advance.</p></div>
+    <div class="fld "><h4>What changed</h4><p>The timeline collapsed to about a month. A small team generated and refined tens of thousands of video clips in thirty days. The company publicly described the 2024 work as a milestone and returned to the method for a second year despite the reaction.</p></div>
+    <div class="fld "><h4>What stayed human</h4><p>Direction and selection. The company&#x27;s generative AI lead has described human storytellers overseeing the work to keep it emotionally coherent, and the wider campaign still included conventionally produced films with human actors.</p></div>
+    <div class="fld "><h4>What the number can and cannot show</h4><p>The System1 result is a structured audience test with a published methodology, which places it above a view count on the ladder. It measures predicted brand effect from a sample response. It does not measure sales, and it does not capture the reputational cost among the creative industry, which is where most of the criticism came from. Social backlash volume is not on the ladder at all.</p></div>
+    <div class="fld "><h4>How to measure a similar handover</h4><p>Run the formal test and the sentiment tracking side by side, and report both. Separate craft criticism from brand effect, because they answer different questions. Then measure sales.</p></div>
+    
+    
+    <div class="fld src"><h4>Sources</h4><p>Coca-Cola press materials, 2024 and 2025. System1 audience testing as reported in The Grocer. Wall Street Journal interview with the chief marketing officer. Contemporary reporting on the reaction.</p></div>
+    <div class="fld note"><h4>Media note for builder</h4><p>A still from the official Coca-Cola advert on the company&#x27;s own channel, credited to Coca-Cola, with the licence basis stated. The screening room should link to the original upload.</p></div>
+  </div>
+</article>
+<article class="case" id="case-13"
+  data-evidence="Sales trend" data-handover="Augmented"
+  data-pattern="The demonstration" data-place="United States"
+  data-sector="Consumer hardware" data-status="Fixed"
+  data-search="humane ai pin the device that demonstrated well the ai pin business was shut down in february 2025, with hp acquiring most of the company&#x27;s assets for usd 116 million, after humane had raised a reported usd 230 million. consumer hardware united states">
+  <button class="case-head" aria-expanded="false">
+    <span class="num">13</span>
+    <span class="case-id">
+      <span class="subject">Humane AI Pin</span>
+      <span class="years">2024 to 2025 &middot; The demonstration</span>
+      <span class="subtitle">The device that demonstrated well</span>
+    </span>
+    <span class="rates">
+      <span class="pill ev ev-3">Sales trend</span>
+      <span class="pill hv hv-0">Augmented</span>
+      
+    </span>
+    <span class="chev" aria-hidden="true"></span>
+  </button>
+  <div class="case-body">
+    <p class="headline"><span>Headline fact</span>The AI Pin business was shut down in February 2025, with HP acquiring most of the company&#x27;s assets for USD 116 million, after Humane had raised a reported USD 230 million.</p>
+    <div class="fld "><h4>What was handed over</h4><p>The interface itself. The proposition was that a screenless assistant could take over the everyday tasks people use a phone for.</p></div>
+    <div class="fld "><h4>The lesson</h4><p>A demonstration optimised for a stage is not a product. The gap only appears when a reviewer uses it as their actual phone for a week.</p></div>
+    <div class="fld take"><h4>My take</h4><p>What killed it was not the concept. It was the distance between the launch film and the thing in your hand, and the fact that a single reviewer was willing to say so plainly.</p></div>
+    <div class="fld "><h4>The starting point</h4><p>Significant funding, senior founders from Apple and a widely watched launch presentation.</p></div>
+    <div class="fld "><h4>What changed</h4><p>Independent reviews, most prominently Marques Brownlee&#x27;s, were severely negative on latency, reliability and heat. The business closed within about a year of shipping.</p></div>
+    <div class="fld "><h4>What stayed human</h4><p>Judgement, exercised in public by reviewers rather than by the company or its investors.</p></div>
+    <div class="fld "><h4>What the number can and cannot show</h4><p>The asset sale figure and the capital raised are both reported and give a defensible picture of value destroyed. They do not isolate the cause. Hardware businesses fail for supply chain, pricing, distribution and timing reasons as well as product ones, and no post mortem has been published separating them.</p></div>
+    <div class="fld "><h4>How to measure a similar handover</h4><p>Put the product in the hands of people who will use it instead of their existing tool, not alongside it, before launch. Measure task completion and abandonment in daily use, and treat latency as a product requirement rather than an engineering detail.</p></div>
+    
+    <div class="fld "><h4>Related case</h4><p>Marques Brownlee&#x27;s review appears in Creator Turning Points, Edition 02, as a case about a reviewer&#x27;s influence. This case is about the handover. Cross-link both ways.</p></div>
+    <div class="fld src"><h4>Sources</h4><p>Humane and HP announcements, February 2025. Contemporary reporting on the acquisition and the capital raised.</p></div>
+    <div class="fld note"><h4>Media note for builder</h4><p>Official Humane or HP product imagery with licence confirmed. Do not use a reviewer&#x27;s video thumbnail.</p></div>
+  </div>
+</article>
+<article class="case" id="case-14"
+  data-evidence="Archival" data-handover="Assisted"
+  data-pattern="The craft" data-place="Australia"
+  data-sector="Professional services" data-status="Fixed"
+  data-search="deloitte australia the report with the invented references a partial refund of the aud 440,000 paid by the australian government, agreed in october 2025. professional services australia">
+  <button class="case-head" aria-expanded="false">
+    <span class="num">14</span>
+    <span class="case-id">
+      <span class="subject">Deloitte Australia</span>
+      <span class="years">2025 &middot; The craft</span>
+      <span class="subtitle">The report with the invented references</span>
+    </span>
+    <span class="rates">
+      <span class="pill ev ev-0">Archival</span>
+      <span class="pill hv hv-1">Assisted</span>
+      
+    </span>
+    <span class="chev" aria-hidden="true"></span>
+  </button>
+  <div class="case-body">
+    <p class="headline"><span>Headline fact</span>A partial refund of the AUD 440,000 paid by the Australian government, agreed in October 2025.</p>
+    <div class="fld "><h4>What was handed over</h4><p>Drafting support on a 237-page independent assurance review for the Department of Employment and Workplace Relations, examining the IT system used to automate penalties in Australia&#x27;s welfare system.</p></div>
+    <div class="fld "><h4>The lesson</h4><p>The output was fluent, structured and properly formatted, which is exactly why nobody checked it. Fluency is not accuracy, and a citation is a claim like any other.</p></div>
+    <div class="fld take"><h4>My take</h4><p>Note the subject of the report. A review of an automated penalty system, undermined by unverified automated output. The irony is not the point, but it is hard to ignore.</p></div>
+    <div class="fld "><h4>The starting point</h4><p>A Big Four firm delivering an assurance review to a government department on a system with a serious history behind it.</p></div>
+    <div class="fld "><h4>What changed</h4><p>A Sydney University researcher, Chris Rudge, found the report full of fabricated references and alerted the media, reporting up to twenty errors in the original version. These included a fabricated quote from a federal court judgment and citations to academic papers that do not exist. A revised version was published in October 2025, and it included a disclosure that a generative AI language system, Azure OpenAI, had been used in writing the report. The department said Deloitte had confirmed some footnotes and references were incorrect and had agreed to repay the final instalment under its contract.</p></div>
+    <div class="fld "><h4>What stayed human</h4><p>One researcher, reading closely. That is the entire control that worked.</p></div>
+    <div class="fld "><h4>What the number can and cannot show</h4><p>The refund is a documented commercial consequence, although the exact amount repaid was to be made public only after reimbursement. One important limit: Deloitte did not confirm that the errors were AI-generated, and the AI disclosure appeared in the revised version. The causal link is strongly implied by the sequence and is not formally established, and the archive should mark it that way.</p></div>
+    <div class="fld "><h4>How to measure a similar handover</h4><p>Make citation verification a separate, named step with its own sign-off, performed by someone who did not draft the document. Count errors found per hundred references and report it to the client.</p></div>
+    
+    
+    <div class="fld src"><h4>Sources</h4><p>Australian Department of Employment and Workplace Relations statement, October 2025. Associated Press reporting, 7 October 2025. Australian Financial Review reporting, August 2025. The revised report as published on the department&#x27;s website.</p></div>
+    <div class="fld note"><h4>Media note for builder</h4><p>The published report on the department&#x27;s website is the image. Public record. Do not use Deloitte branding or office photography.</p></div>
+  </div>
+</article>
+<article class="case" id="case-15"
+  data-evidence="Sales trend" data-handover="Automated"
+  data-pattern="The voice" data-place="United States"
+  data-sector="Food service" data-status="LIVE"
+  data-search="taco bell eighteen thousand waters voice ai was live in more than 500 us drive-thrus and had taken over two million orders at the point the company said it was rethinking the rollout. food service united states">
+  <button class="case-head" aria-expanded="false">
+    <span class="num">15</span>
+    <span class="case-id">
+      <span class="subject">Taco Bell</span>
+      <span class="years">2023 to now &middot; The voice</span>
+      <span class="subtitle">Eighteen thousand waters</span>
+    </span>
+    <span class="rates">
+      <span class="pill ev ev-3">Sales trend</span>
+      <span class="pill hv hv-3">Automated</span>
+      <span class="pill live">Live</span>
+    </span>
+    <span class="chev" aria-hidden="true"></span>
+  </button>
+  <div class="case-body">
+    <p class="headline"><span>Headline fact</span>Voice AI was live in more than 500 US drive-thrus and had taken over two million orders at the point the company said it was rethinking the rollout.</p>
+    <div class="fld "><h4>What was handed over</h4><p>Order taking at the drive-thru, without a human intermediary, on a platform with menu logic attached.</p></div>
+    <div class="fld "><h4>The lesson</h4><p>A system open to the public will be probed by the public. The viral failures were not edge cases discovered by accident. They were found deliberately, by customers trying to reach a human.</p></div>
+    <div class="fld take"><h4>My take</h4><p>This case has already aged against the story everyone tells about it. The meme is that Taco Bell pulled back. The record says it expanded, and that is exactly why cases like this need a review date on them.</p></div>
+    <div class="fld "><h4>The starting point</h4><p>Drive-thru ordering is high-volume, repetitive and noisy, and it is a bottleneck at peak. The case for voice automation was sound.</p></div>
+    <div class="fld "><h4>What changed</h4><p>In August 2025, after a run of viral videos including an order for 18,000 cups of water, the chief digital and technology officer told the Wall Street Journal the company was reconsidering where to use the system, and said staff would be coached on when to step in. The deployment then grew rather than shrank. By late 2026 the voice AI was running at roughly 900 restaurants with a stated target of 1,500 by year end. On a November 2026 earnings call, executives said drive-thru satisfaction at those locations had improved by 6 per cent and sales had risen 1.5 per cent through automatic upsells.</p></div>
+    <div class="fld "><h4>What stayed human</h4><p>Escalation, by design after the fact. Staff monitor the system and take over at peak and when it struggles.</p></div>
+    <div class="fld "><h4>What the number can and cannot show</h4><p>The improvement figures are company-reported on an earnings call, with no published methodology and no independent verification. Asked directly about the effect on franchisee profits, the company did not answer directly. A separate claim about improved employee retention has been made by company and vendor statements without published figures. The viral failures, by contrast, are visible and verifiable, which is a useful reminder that the most watchable evidence and the most reliable evidence are rarely the same thing.</p></div>
+    <div class="fld "><h4>How to measure a similar handover</h4><p>Red-team the system against deliberate abuse before launch, with sanity limits on quantity and value. Measure order accuracy, repeat interactions and abandonment at the lane rather than satisfaction in aggregate. Publish the method alongside the number.</p></div>
+    <div class="fld "><h4>Live note</h4><p>Review quarterly. The open questions are whether the satisfaction and sales figures are ever substantiated independently, whether the 1,500 target is met, and whether franchisee economics are disclosed.</p></div>
+    
+    <div class="fld src"><h4>Sources</h4><p>Wall Street Journal interview with Taco Bell&#x27;s chief digital and technology officer, August 2025. Restaurant Dive and Restaurant Business reporting, 2026. Yum! Brands earnings call, November 2026.</p></div>
+    <div class="fld note"><h4>Media note for builder</h4><p>Yum! Brands or Taco Bell official press imagery of the voice ordering system, licence confirmed. Do not use stills from customers&#x27; viral videos, which belong to the people who filmed them.</p></div>
+  </div>
+</article>
+  </div>
+</div></section>
+
+<section><div class="wrap">
+  <p class="secnum">05 / The evidence</p>
+  <h2>What counts as proof</h2>
+  <p>Each case carries one evidence rating. The rating describes the best public source, not the quality of the work.</p>
+  <div class="ladder">
+    <div><b>Modelled effect</b><span>An effect estimated against a baseline or an independent benchmark that the claim could have failed.</span></div>
+    <div><b>Sales trend</b><span>A financial or commercial figure moved, with other causes not separated out.</span></div>
+    <div><b>Survey</b><span>A structured sample reported a change in what they believe, intend or notice.</span></div>
+    <div><b>Reach only</b><span>The number counts attention, not outcomes.</span></div>
+    <div><b>Archival</b><span>The record shows what happened, without an outcome figure.</span></div>
+  </div>
+  <p class="dist">Edition 01 distribution. Modelled effect 1. Sales trend 4. Survey 1. Reach only 1. Archival 8.</p>
+
+  <h3>The handover scale</h3>
+  <p>A second rating, carried by every case, describing how deep the handover went.</p>
+  <div class="ladder">
+    <div><b>Augmented</b><span>The machine drafts. A human decides every output.</span></div>
+    <div><b>Assisted</b><span>The machine does one step. Humans run the process.</span></div>
+    <div><b>Delegated</b><span>The machine runs the task. Humans sample and correct.</span></div>
+    <div><b>Automated</b><span>The machine runs the task. Humans handle exceptions only.</span></div>
+    <div><b>Replaced</b><span>The human function no longer exists.</span></div>
+  </div>
+  <p class="dist">Edition 01 distribution. Augmented 4. Assisted 3. Delegated 3. Automated 5. Replaced 0.</p>
+
+  <h3>How cases earn a place</h3>
+  <p>Each case has a specific thing handed to a machine, a traceable public record, and a consequence somebody documented. The collection is curated and unranked. The measurement suggestions are proposals for a comparable decision today, not findings.</p>
+  <h3>What this edition rates, and what it does not</h3>
+  <p>The archive rates the public record. It does not rate the technology, it does not rate the vendors, and it does not rate anyone's integrity. A deployment that went wrong is evidence about that deployment, not evidence that AI does not work.</p>
+</div></section>
+
+<section><div class="wrap">
+  <p class="secnum">06 / The editorial purpose</p>
+  <h3>Say what was handed over.</h3>
+<p>Most writing about AI describes a capability. This archive describes a decision: somebody chose to hand a specific piece of work to a machine, somebody else lived with the result, and a record exists of what happened next. The cases are dated and the live ones carry a review date, because this is a story still being written and a judgement made in 2026 should be allowed to age in public.</p>
+</div></section>
+
+<section><div class="wrap">
+  <p class="secnum">07 / What comes next</p>
+  <p>Edition 02, <strong>Proof first</strong>, gathers the deployments that can show their working: published outcomes, peer review, regulatory filings and controlled comparison. It is deliberately the opposite selection to this one.</p>
+<p>Then <strong>Money first</strong>, what was spent and what it bought. <strong>Work first</strong>, what happened to the people. <strong>Failure first</strong>, what went wrong and the rules written afterwards. <strong>Human first</strong>, where what stayed human was the value. And <strong>Edge first</strong>, outside big tech and outside North America, where the evidence is often better than at the centre.</p>
+<p>The companion archives, Brand Turning Points, Partnership Turning Points and Creator Turning Points, ask the same questions of 300 campaigns, partnerships and creator moments.</p>
+</div></section>
+
+<footer><div class="wrap">
+  <p>AI Turning Points / Edition 01 / Curated by Matthew Batcheldor</p>
+  <p>Companion archives: <a href="https://mattbatcheldor.github.io/brand-turning-points/">Brand Turning Points</a>, <a href="https://mattbatcheldor.github.io/partnership-turning-points/the-index/">Partnership Turning Points</a>, <a href="https://mattbatcheldor.github.io/creator-turning-points/the-index/">Creator Turning Points</a>. <a href="https://mattbatcheldor.github.io/career-portfolio/commercial-edition/">Career Portfolio</a>.</p>
+  <p>&copy; 2026 Matthew Batcheldor. Text and ratings by Matthew Batcheldor. Company names, images and films belong to their owners and are credited in each case.</p>
+  <p><a class="totop" href="#top">Back to top</a></p>
+</div></footer>
+
+<script>
+(function(){
+  var state={evidence:"",handover:"",pattern:"",place:"",sector:"",q:""};
+  var cases=[].slice.call(document.querySelectorAll('.case'));
+  var count=document.getElementById('count');
+
+  function apply(){
+    var n=0;
+    cases.forEach(function(c){
+      var ok=true;
+      ['evidence','handover','pattern','place','sector'].forEach(function(k){
+        if(state[k] && c.dataset[k]!==state[k]) ok=false;
+      });
+      if(state.q && c.dataset.search.indexOf(state.q)===-1) ok=false;
+      c.classList.toggle('hide',!ok);
+      if(ok) n++;
+    });
+    count.textContent = n===1 ? '1 case' : n+' cases';
+  }
+
+  document.querySelectorAll('.fbtns button').forEach(function(b){
+    b.addEventListener('click',function(){
+      var k=b.dataset.k;
+      state[k]=b.dataset.v;
+      b.parentNode.querySelectorAll('button').forEach(function(x){x.classList.remove('on');});
+      b.classList.add('on');
+      apply();
+    });
+  });
+
+  var q=document.getElementById('q');
+  q.addEventListener('input',function(){state.q=q.value.trim().toLowerCase();apply();});
+
+  document.querySelectorAll('.case-head').forEach(function(h){
+    h.addEventListener('click',function(){
+      var c=h.parentNode, open=c.classList.toggle('open');
+      h.setAttribute('aria-expanded',open?'true':'false');
+    });
+  });
+
+  document.querySelectorAll('.plot .pt').forEach(function(p){
+    p.addEventListener('click',function(){
+      var c=document.getElementById(p.dataset.case);
+      if(!c) return;
+      if(c.classList.contains('hide')){
+        document.querySelectorAll('.fbtns button[data-v=""]').forEach(function(b){b.click();});
+        q.value=''; state.q=''; apply();
+      }
+      if(!c.classList.contains('open')) c.querySelector('.case-head').click();
+      c.scrollIntoView({behavior:'smooth',block:'center'});
+      c.classList.add('flash');
+      setTimeout(function(){c.classList.remove('flash');},1600);
+    });
+  });
+})();
+</script>
+</body>
+</html>
