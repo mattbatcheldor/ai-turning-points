@@ -1,0 +1,52 @@
+[
+  {
+    "case": "04",
+    "file": "assets/media/zillow-filing.webp",
+    "alt": "Extract from Zillow Group’s quarterly filing recording a $304.4 million inventory write-down associated with Zillow Offers.",
+    "credit": "Zillow Group",
+    "source_url": "https://www.sec.gov/Archives/edgar/data/1617640/000161764021000087/R27.htm",
+    "basis": "Limited quotation for criticism or review with attribution; not an open licence.",
+    "verified_on": "2026-11-26",
+    "transformation": "Original image for AlphaFold; crop of original source for document excerpts."
+  },
+  {
+    "case": "05",
+    "file": "assets/media/colorado-results.webp",
+    "alt": "Colorado State Fair results table listing Jason Allen’s Théâtre D’opéra Spatial in first place in the digital arts category.",
+    "credit": "Colorado State Fair",
+    "source_url": "https://coloradostatefair.com/wp-content/uploads/2022/08/2022-Fine-Arts-First-Second-Third.pdf",
+    "basis": "Limited quotation of the official results for criticism or review with attribution; not an open licence.",
+    "verified_on": "2026-11-26",
+    "transformation": "Original image for AlphaFold; crop of original source for document excerpts."
+  },
+  {
+    "case": "06",
+    "file": "assets/media/chatgpt-launch.webp",
+    "alt": "OpenAI announcement headed Introducing ChatGPT, dated 30 November 2022.",
+    "credit": "OpenAI",
+    "source_url": "https://openai.com/index/chatgpt/",
+    "basis": "Limited quotation for criticism or review with attribution; not an open licence.",
+    "verified_on": "2026-11-26",
+    "transformation": "Original image for AlphaFold; crop of original source for document excerpts."
+  },
+  {
+    "case": "09",
+    "file": "assets/media/air-canada-decision.webp",
+    "alt": "First-page extract from Moffatt v. Air Canada, identifying the parties, decision date and tribunal member Christopher C. Rivers.",
+    "credit": "British Columbia Civil Resolution Tribunal",
+    "source_url": "https://decisions.civilresolutionbc.ca/crt/crtd/en/525448/1/document.do",
+    "basis": "Limited quotation of the decision for criticism or review with attribution; not an open licence.",
+    "verified_on": "2026-11-26",
+    "transformation": "Original image for AlphaFold; crop of original source for document excerpts."
+  },
+  {
+    "case": "11",
+    "file": "assets/media/alphafold.webp",
+    "alt": "Ribbon representation of a protein structure on a white background, with folded regions coloured dark blue, cyan, yellow and orange.",
+    "credit": "EMBL-EBI Training",
+    "source_url": "https://trainingcontent.embl.org/sites/default/files/book-images/AlphaFold.png",
+    "basis": "Creative Commons Attribution 4.0 International (CC BY 4.0).",
+    "verified_on": "2026-11-26",
+    "transformation": "Original image for AlphaFold; crop of original source for document excerpts."
+  }
+]
