@@ -1,0 +1,42 @@
+[
+  {
+    "case": "04",
+    "path": "assets/media/brands/zillow.png",
+    "owner": "Zillow Group, Inc.",
+    "source_url": "https://www.zillow.com/news/logos/",
+    "direct_source_url": "https://www.zillowstatic.com/bedrock/app/uploads/sites/60/2026/02/ZillowBrand-light-logo-440-ZxD-DF-1280x269.png",
+    "alt": "Zillow house symbol and wordmark.",
+    "basis": "Editorial identification. No open licence or endorsement claimed.",
+    "processing": "Surrounding whitespace trimmed; proportions retained."
+  },
+  {
+    "case": "05",
+    "path": "assets/media/brands/fair.png",
+    "owner": "Colorado State Fair Authority",
+    "source_url": "https://pueblo.extension.colostate.edu/programs/4-h/county-and-state-fair/",
+    "direct_source_url": "https://pueblo.extension.colostate.edu/wp-content/uploads/sites/24/2016/09/statefairlogo-1.jpg",
+    "alt": "Colorado State Fair logo with a sun emblem.",
+    "basis": "Editorial identification. No open licence or endorsement claimed.",
+    "processing": "Surrounding whitespace trimmed; proportions retained."
+  },
+  {
+    "case": "06",
+    "path": "assets/media/brands/openai.svg",
+    "owner": "OpenAI",
+    "source_url": "https://openai.com/brand/",
+    "direct_source_url": "https://cdn.openai.com/brand/OpenAI-Logos-2025.zip",
+    "alt": "OpenAI wordmark in black.",
+    "basis": "Editorial identification. No open licence or endorsement claimed.",
+    "processing": "Surrounding whitespace trimmed; proportions retained."
+  },
+  {
+    "case": "09",
+    "path": "assets/media/brands/ac.png",
+    "owner": "Air Canada",
+    "source_url": "https://www.aircanada.com/media/",
+    "direct_source_url": "https://content.presspage.com/uploads/3167/b1bd24f0-5208-43a4-89a8-085e6182541c/1920_logosocialmedia-1920x1080.jpg?85818",
+    "alt": "Air Canada wordmark beside a red maple leaf enclosed in a circle.",
+    "basis": "Editorial identification. No open licence or endorsement claimed.",
+    "processing": "Surrounding whitespace trimmed; proportions retained."
+  }
+]
