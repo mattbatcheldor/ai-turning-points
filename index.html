@@ -253,7 +253,7 @@ a:focus-visible,button:focus-visible,input:focus-visible{outline:2px solid var(-
 
 /* AI opening: light, motion and direct case navigation */
 .ai-entry{position:relative;isolation:isolate;overflow:hidden;padding:0;background:radial-gradient(ellipse at 82% 30%,#23466a55,transparent 58%),linear-gradient(135deg,#171f2c,#111c2c 72%,#17283e);border-bottom:1px solid var(--line)}
-.ai-entry:before{content:"";position:absolute;inset:0;z-index:-1;background:linear-gradient(90deg,transparent 49.9%,#91b7e509 50%,transparent 50.1%);pointer-events:none}
+.ai-entry:before{content:none}
 .ai-entry>.wrap{display:block;max-width:1440px;padding-top:34px;padding-bottom:0}
 .hero-stage{display:grid;grid-template-columns:1fr 1.15fr;align-items:center;min-height:520px;gap:12px}
 .hero-copy{position:relative;z-index:2;padding-block:30px}
@@ -328,6 +328,10 @@ a:focus-visible,button:focus-visible,input:focus-visible{outline:2px solid var(-
  .ai-entry .stat span{font-size:10px;letter-spacing:.04em}
 }
 
+
+/* Evidence subheading: comfortable scale and balanced wrapping */
+section>.wrap>h3.evidence-scope-heading{font-size:clamp(25px,2.65vw,36px);line-height:1.2;max-width:none;letter-spacing:-.025em;text-wrap:balance;margin-top:34px}
+.keep-together{white-space:nowrap}
 </style>
 <link rel="icon" type="image/svg+xml" href="favicon.svg">
 </head>
@@ -1019,7 +1023,7 @@ a:focus-visible,button:focus-visible,input:focus-visible{outline:2px solid var(-
 
   <h3>How cases earn a place</h3>
   <p>Each case has a specific thing handed to a machine, a traceable public record, and a consequence somebody documented. The collection is curated and unranked. The measurement suggestions are proposals for a comparable decision today, not findings.</p>
-  <h3>What this edition rates, and what it does not</h3>
+  <h3 class="evidence-scope-heading">What this edition rates, and what it <span class="keep-together">does not</span></h3>
   <p>The archive rates the public record. It does not rate the technology, it does not rate the vendors, and it does not rate anyone's integrity. A deployment that went wrong is evidence about that deployment, not evidence that AI does not work.</p>
 </div></section>
 
